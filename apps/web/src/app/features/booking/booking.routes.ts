@@ -21,6 +21,12 @@ export const BOOKING_ROUTES: Routes = [
         loadComponent: () =>
           import('./profissional/escolha-profissional').then((m) => m.EscolhaProfissional),
       },
+      {
+        path: PASSOS[1].path,
+        title: titulo(1),
+        canActivate: [passoGuard(1)],
+        loadComponent: () => import('./data-horario/data-horario').then((m) => m.DataHorario),
+      },
     ],
   },
 ];
