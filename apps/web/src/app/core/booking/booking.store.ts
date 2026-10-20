@@ -49,6 +49,11 @@ export class BookingStore {
     this._horario.set(horario);
   }
 
+  /** Quando o horário foi tomado por outra pessoa: mantém o resto e pede outro horário. */
+  limparHorario(): void {
+    this._horario.set(null);
+  }
+
   limpar(): void {
     this._profissional.set(null);
     this._servico.set(null);
