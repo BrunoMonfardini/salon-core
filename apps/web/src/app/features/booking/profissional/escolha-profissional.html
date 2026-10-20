@@ -1,0 +1,47 @@
+<section class="pilha" aria-labelledby="profissional-titulo">
+  <header class="pilha">
+    <h1 id="profissional-titulo">Escolha o profissional</h1>
+    <p class="texto-secundario">Veja quem tem horário e toque para escolher.</p>
+  </header>
+
+  @if (opcoes.isLoading()) {
+    <ul class="grade" aria-busy="true">
+      @for (item of esqueletos; track item) {
+        <li><arg-skeleton shape="rect" height="8rem" /></li>
+      }
+    </ul>
+  } @else {
+    <ul class="grade">
+      @for (opcao of opcoes.value(); track opcao.profissional.id) {
+        <li>
+          <article arg-card>
+            <div arg-card-header class="acoes">
+              <arg-avatar
+                [name]="opcao.profissional.nome"
+                [src]="opcao.profissional.foto"
+                decorative
+              />
+              <h2 arg-card-title>
+                <button
+                  arg-card-link
+                  type="button"
+                  [disabled]="!opcao.status.disponivel"
+                  (click)="escolher(opcao.profissional)"
+                >
+                  {{ opcao.profissional.nome }}
+                </button>
+              </h2>
+            </div>
+            <p arg-card-description>{{ opcao.profissional.especialidades.join(' · ') }}</p>
+            <footer arg-card-actions class="acoes">
+              <span arg-badge [tone]="opcao.status.tom">{{ opcao.status.texto }}</span>
+              @if (escolhido()?.id === opcao.profissional.id) {
+                <span arg-badge tone="primary">Escolhido</span>
+              }
+            </footer>
+          </article>
+        </li>
+      }
+    </ul>
+  }
+</section>
