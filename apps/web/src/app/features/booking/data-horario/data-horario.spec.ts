@@ -33,9 +33,12 @@ describe('DataHorario', () => {
     await fixture.whenStable();
   }
 
-  function radio(rotulo: RegExp): HTMLInputElement {
-    const label = [...el.querySelectorAll('label')].find((l) => rotulo.test(l.textContent ?? ''));
-    return label?.querySelector('input') as HTMLInputElement;
+  function servicos(): HTMLButtonElement[] {
+    return [...el.querySelectorAll<HTMLButtonElement>('app-opcao-card h3 button')];
+  }
+
+  function servico(nome: string): HTMLButtonElement {
+    return servicos().find((b) => b.textContent?.trim() === nome) as HTMLButtonElement;
   }
 
   function horario(hora: string): HTMLInputElement {
@@ -47,7 +50,7 @@ describe('DataHorario', () => {
   }
 
   async function escolherCorteHoje() {
-    radio(/^\s*Corte ·/).click();
+    servico('Corte').click();
     await atualizar();
     fixture.debugElement
       .query(By.directive(ArgDateInput))
@@ -55,16 +58,26 @@ describe('DataHorario', () => {
     await atualizar();
   }
 
-  it('mostra só os serviços que o profissional oferece', () => {
-    const servicos = [...el.querySelectorAll('label')].map((l) =>
-      l.textContent?.split('·')[0].trim(),
-    );
-    expect(servicos).toEqual(['Corte', 'Barba', 'Corte e barba']);
+  it('mostra só os serviços do profissional, em cards com duração e preço', () => {
+    expect(servicos().map((b) => b.textContent?.trim())).toEqual([
+      'Corte',
+      'Barba',
+      'Corte e barba',
+    ]);
+    const card = el.querySelector('app-opcao-card')?.textContent?.replace(/s+/g, ' ');
+    expect(card).toMatch(/30 min.*R\$\s50,00/);
+  });
+
+  it('marca o serviço escolhido', async () => {
+    servico('Barba').click();
+    await atualizar();
+    expect(servico('Barba').getAttribute('aria-pressed')).toBe('true');
+    expect(servico('Corte').getAttribute('aria-pressed')).toBe('false');
   });
 
   it('a data só aparece depois do serviço, e o horário depois da data', async () => {
     expect(el.querySelector('input[arg-date]')).toBeNull();
-    radio(/^\s*Corte ·/).click();
+    servico('Corte').click();
     await atualizar();
     expect(store.servico()?.id).toBe('corte');
     expect(el.querySelector('input[arg-date]')).not.toBeNull();
@@ -72,7 +85,7 @@ describe('DataHorario', () => {
   });
 
   it('bloqueia no calendário os dias sem vaga e fora da janela', async () => {
-    radio(/^\s*Corte ·/).click();
+    servico('Corte').click();
     await atualizar();
     const bloqueado = dataInput().blocked();
     expect(bloqueado?.('2026-10-26')).toBe(true); // segunda: folga
