@@ -27,6 +27,12 @@ export const BOOKING_ROUTES: Routes = [
         canActivate: [passoGuard(1)],
         loadComponent: () => import('./data-horario/data-horario').then((m) => m.DataHorario),
       },
+      {
+        path: PASSOS[2].path,
+        title: titulo(2),
+        canActivate: [passoGuard(2)],
+        loadComponent: () => import('./confirmacao/confirmacao').then((m) => m.Confirmacao),
+      },
     ],
   },
 ];
