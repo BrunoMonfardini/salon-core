@@ -32,6 +32,9 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
+          # Escreve o .npmrc do usuário com o NODE_AUTH_TOKEN para o escopo do Argila
+          registry-url: https://npm.pkg.github.com
+          scope: '@brunomonfardini'
       - run: pnpm install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -68,6 +71,9 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
+          # Escreve o .npmrc do usuário com o NODE_AUTH_TOKEN para o escopo do Argila
+          registry-url: https://npm.pkg.github.com
+          scope: '@brunomonfardini'
       - run: pnpm install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
