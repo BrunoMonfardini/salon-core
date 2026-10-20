@@ -29,7 +29,13 @@
                 "input": "apps/web/public"
               }
             ],
-            "styles": ["apps/web/src/styles.css"]
+            "styles": [
+              "node_modules/@brunomonfardini/ui/tokens/argila.css",
+              "node_modules/@brunomonfardini/ui/tokens/base.css",
+              "node_modules/@brunomonfardini/ui/tokens/design-systems/transparente/index.css",
+              "node_modules/@brunomonfardini/ui/tokens/colors.css",
+              "apps/web/src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
