@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Layout comum a todas as telas. Só tokens do Argila: nenhuma cor, espaço ou raio literal.
+ * Componentes usam estas classes em vez de repetir o mesmo CSS.
+ */
+
+/* Coluna central da página, com respiro nas laterais do celular */
+.pagina {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding: var(--arg-space-6) var(--arg-space-4) var(--arg-space-12);
+}
+
+/* Empilha os filhos com o mesmo espaço entre eles */
+.pilha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--arg-space-6);
+}
+
+/* Cards lado a lado quando cabe, um por linha no celular */
+.grade {
+  display: grid;
+  gap: var(--arg-space-4);
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Botões e links de ação em linha, quebrando quando não cabem */
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--arg-space-3);
+  align-items: center;
+}
+
+.texto-secundario {
+  color: var(--arg-color-text-muted);
+  margin: 0;
+}
