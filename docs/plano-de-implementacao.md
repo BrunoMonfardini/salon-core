@@ -6,7 +6,7 @@ App de agendamento da barbearia em Angular 22 + pnpm, com o design system
 da empresa e a estrutura de `.github` do
 [ai-memory](https://github.com/akitaonrails/ai-memory/tree/main/.github).
 
-> Status: **plano, ainda não executado.** O repositório clonado está vazio.
+> Status: **em execução.** Passos 1 a 3 feitos (workspace, esteira e núcleo); telas a seguir.
 
 ---
 
@@ -213,12 +213,29 @@ Cada PR: um commit por feature, Conventional Commits em minúscula, `verify` e `
 
 ---
 
-## 7. Pontos em aberto (decidir antes ou durante)
+## 7. Decisões
 
-1. **Endereço**: "Parque das Nações" com Rua França 77 fica em **Santo André (SP)**, não na capital. Confirmar a cidade antes de fixar as coordenadas.
-2. **Agenda do barbeiro**: Google Calendar? Cada barbeiro com a própria conta ou uma agenda por profissional numa conta da barbearia? Define o backend da fase 2.
-3. **Token do GitHub Packages**: preciso de `NODE_AUTH_TOKEN` com `read:packages` na máquina para instalar o Argila, e o repositório `salon-core` precisa de acesso ao pacote nas Actions.
-4. **Shop**: só vitrine, ou venda com pagamento? Onde ficam os produtos (mock, planilha, Supabase)?
-5. **Profissionais, serviços, horários de expediente**: dados reais ou mock inicial?
-6. **Deploy**: Vercel como o catálogo do Argila?
-7. **Design system/paleta**: usar o estilo `argila` padrão ou outro dos sete (ex.: `neo-brutalista`) para a barbearia?
+| #   | Tema               | Decisão                                                                             |
+| --- | ------------------ | ----------------------------------------------------------------------------------- |
+| 1   | Endereço           | Rua França, 77 - Parque das Nações, Santo André - SP, por enquanto.                 |
+| 2   | Agenda do barbeiro | Uma agenda por profissional, todas na conta da barbearia.                           |
+| 3   | GitHub Packages    | Token `read:packages` local; autenticações extras são pedidas quando precisar.      |
+| 4   | Shop               | Supabase mais à frente; sem pagamento online, o cliente paga na barbearia.          |
+| 5   | Dados              | Mock no início. Depois, uma área de admin para cada barbeiro definir quando atende. |
+| 6   | Deploy             | Vercel.                                                                             |
+| 7   | Aparência          | `provideArgila` com o segmento abaixo.                                              |
+
+```ts
+provideArgila({
+  segments: {
+    barbearia: {
+      style: 'transparente',
+      scheme: 'dark',
+      colors: { primary: 'ardosia', secondary: 'petroleo', accent: 'mostarda' },
+      surfaceOpacity: 0.65,
+      background: 'degrade',
+    },
+  },
+  defaultSegment: 'barbearia',
+});
+```
