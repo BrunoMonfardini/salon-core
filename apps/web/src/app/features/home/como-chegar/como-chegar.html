@@ -1,6 +1,17 @@
 <section arg-card aria-labelledby="como-chegar-titulo">
-  <h2 arg-card-title id="como-chegar-titulo"><arg-icon name="map-pin" /> Como chegar</h2>
+  <h2 arg-card-title id="como-chegar-titulo" class="com-icone">
+    <arg-icon name="map-pin" /> Como chegar
+  </h2>
   <p arg-card-description>{{ endereco }}</p>
+  <div arg-card-actions class="acoes">
+    @for (acao of acoes; track acao.rotulo) {
+      <a arg-button variant="secondary" [href]="acao.url" target="_blank" rel="noopener">
+        <arg-icon [name]="acao.icone" />
+        {{ acao.rotulo }}
+        <span class="so-leitor">(abre em outra aba)</span>
+      </a>
+    }
+  </div>
   <div arg-card-content>
     <iframe
       class="mapa"
@@ -10,13 +21,4 @@
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
   </div>
-  <footer arg-card-actions class="acoes">
-    @for (acao of acoes; track acao.url) {
-      <a arg-button variant="secondary" [href]="acao.url" target="_blank" rel="noopener">
-        {{ acao.rotulo }}
-        <arg-icon name="external-link" />
-        <span class="arg-sr-only">(abre em outra aba)</span>
-      </a>
-    }
-  </footer>
 </section>

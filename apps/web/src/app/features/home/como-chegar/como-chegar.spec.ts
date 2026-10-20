@@ -33,7 +33,18 @@ describe('ComoChegar', () => {
     for (const a of botoes) {
       expect(a.target).toBe('_blank');
       expect(a.rel).toBe('noopener');
-      expect(a.textContent).toContain('abre em outra aba');
+      expect(a.querySelector('.so-leitor')?.textContent).toBe('(abre em outra aba)');
     }
+  });
+
+  it('cada botão tem ícone: pino para a rota, carro para as corridas', () => {
+    const icones = [...renderizar().querySelectorAll('a arg-icon')];
+    expect(icones).toHaveLength(3);
+    expect(icones.every((i) => i.querySelector('svg')?.innerHTML)).toBe(true);
+  });
+
+  it('o mapa vem depois dos botões, no fim do card', () => {
+    const card = renderizar().querySelector('section');
+    expect(card?.lastElementChild?.querySelector('iframe')).not.toBeNull();
   });
 });
