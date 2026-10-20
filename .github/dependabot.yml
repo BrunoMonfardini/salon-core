@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore(deps)
+    ignore:
+      # typescript-eslint ainda não suporta o TypeScript 7; liberar quando suportar
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      # Os tipos do Node acompanham a versão do .nvmrc (24), não a mais nova
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+    groups:
+      angular:
+        patterns: ['@angular/*', '@angular-devkit/*', '@angular-eslint/*', 'angular-eslint']
+      argila:
+        patterns: ['@brunomonfardini/*']
+      dev-tools:
+        dependency-type: development
+        exclude-patterns: ['@angular/*', '@angular-devkit/*']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
