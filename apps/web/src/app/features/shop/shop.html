@@ -1,0 +1,30 @@
+<main class="pagina pilha">
+  <a arg-link variant="muted" routerLink="/">Voltar ao início</a>
+  <header class="pilha">
+    <h1>Shop</h1>
+    <p class="texto-secundario">
+      Produtos que usamos na barbearia. Separe o seu e pague na hora do atendimento.
+    </p>
+  </header>
+
+  @if (produtos.isLoading()) {
+    <ul class="grade" aria-busy="true">
+      @for (item of esqueletos; track item) {
+        <li><arg-skeleton shape="rect" height="8rem" /></li>
+      }
+    </ul>
+  } @else {
+    @let lista = produtos.value() ?? [];
+    @if (lista.length) {
+      <ul class="grade">
+        @for (produto of lista; track produto.id) {
+          <li><app-produto-card [produto]="produto" /></li>
+        }
+      </ul>
+    } @else {
+      <section arg-empty-state heading="Nenhum produto por enquanto" [level]="2">
+        Volte em breve: estamos montando a vitrine.
+      </section>
+    }
+  }
+</main>

@@ -7,5 +7,10 @@ export const routes: Routes = [
     title: SALON.nome,
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
   },
+  {
+    path: 'shop',
+    title: `Shop | ${SALON.nome}`,
+    loadComponent: () => import('./features/shop/shop').then((m) => m.Shop),
+  },
   { path: '**', redirectTo: '' },
 ];
