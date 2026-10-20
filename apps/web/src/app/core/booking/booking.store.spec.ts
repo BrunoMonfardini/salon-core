@@ -62,6 +62,14 @@ describe('BookingStore', () => {
     expect(store.horario()).toBeNull();
   });
 
+  it('limparHorario tira só o horário', () => {
+    preencherTudo();
+    store.limparHorario();
+    expect(store.horario()).toBeNull();
+    expect(store.data()).toBe('2026-10-20');
+    expect(store.passosConcluidos()).toBe(1);
+  });
+
   it('limpar volta ao início', () => {
     preencherTudo();
     store.limpar();
