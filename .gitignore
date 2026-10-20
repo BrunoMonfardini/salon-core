@@ -1,0 +1,35 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Node
+node_modules/
+npm-debug.log
+
+# Segredos e variáveis locais
+.env
+.env.*
+!.env.example
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+/coverage
+__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Relatórios dos testes (JUnit) e histórico da cobertura
+/reports
+/cobertura-main
