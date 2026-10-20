@@ -1,6 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, resource } from '@angular/core';
 import { Router } from '@angular/router';
-import { ARG_CHOICE, ARG_FIELD, ArgButton, ArgDateInput, ArgTimeSlots } from '@brunomonfardini/ui';
+import {
+  ARG_FIELD,
+  ArgButton,
+  ArgDateInput,
+  ArgIcon,
+  ArgTimeSlots,
+  formatCents,
+} from '@brunomonfardini/ui';
 import {
   AGORA,
   DIAS_DE_AGENDA,
@@ -10,13 +17,13 @@ import {
 } from '../../../core/agenda/disponibilidade';
 import { BookingStore } from '../../../core/booking/booking.store';
 import { AgendaRepo, ServicosRepo } from '../../../core/data/repos';
-import { rotuloDoServico } from '../../../core/formatos';
 import { Servico } from '../../../core/models';
+import { OpcaoCard } from '../../../shared/ui/opcao-card/opcao-card';
 import { urlDoPasso } from '../passos';
 
 @Component({
   selector: 'app-data-horario',
-  imports: [ARG_CHOICE, ARG_FIELD, ArgButton, ArgDateInput, ArgTimeSlots],
+  imports: [ARG_FIELD, ArgButton, ArgDateInput, ArgIcon, ArgTimeSlots, OpcaoCard],
   templateUrl: './data-horario.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -27,7 +34,7 @@ export class DataHorario {
   private readonly agora = inject(AGORA)();
 
   protected readonly store = inject(BookingStore);
-  protected readonly rotuloDoServico = rotuloDoServico;
+  protected readonly preco = formatCents;
   private readonly janela = diasDaJanela(this.agora);
   protected readonly hoje = this.janela[0];
   protected readonly ultimoDia = this.janela[DIAS_DE_AGENDA - 1];

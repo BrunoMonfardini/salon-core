@@ -4,21 +4,24 @@
     <p class="texto-secundario">Com {{ store.profissional()?.nome }}.</p>
   </header>
 
-  <arg-choice-group label="Serviço" name="servico">
-    @for (servico of servicosDoProfissional(); track servico.id) {
-      <label arg-choice>
-        <input
-          type="radio"
-          arg-radio
-          name="servico"
-          [value]="servico.id"
-          [checked]="store.servico()?.id === servico.id"
-          (change)="escolherServico(servico)"
-        />
-        {{ rotuloDoServico(servico) }}
-      </label>
-    }
-  </arg-choice-group>
+  <section class="pilha" aria-labelledby="servico-titulo">
+    <h2 id="servico-titulo">Serviço</h2>
+    <ul class="grade">
+      @for (servico of servicosDoProfissional(); track servico.id) {
+        <li>
+          <app-opcao-card
+            [titulo]="servico.nome"
+            [nivel]="3"
+            [escolhida]="store.servico()?.id === servico.id"
+            (escolher)="escolherServico(servico)"
+          >
+            <p arg-card-description><arg-icon name="clock" /> {{ servico.duracaoMin }} min</p>
+            <strong opcaoRodape>{{ preco(servico.precoCentavos) }}</strong>
+          </app-opcao-card>
+        </li>
+      }
+    </ul>
+  </section>
 
   @if (store.servico()) {
     <arg-field label="Data" hint="Os dias sem horário livre ficam bloqueados no calendário.">
