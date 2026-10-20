@@ -1,25 +1,27 @@
 <main class="pagina pilha">
-  <header class="pilha">
-    <h1>{{ salon.nome }}</h1>
-    <p class="texto-secundario">{{ salon.resumo }}</p>
-    <div class="acoes">
-      <a arg-button variant="primary" size="lg" routerLink="/agendar/profissional">
-        <arg-icon name="calendar" /> Agendar horário
-      </a>
+  <section class="banner" aria-labelledby="banner-titulo">
+    <div class="banner__texto">
+      <h1 id="banner-titulo" class="banner__titulo">{{ salon.nome }}</h1>
+      <p class="banner__resumo">{{ salon.resumo }}</p>
     </div>
-  </header>
+    <a
+      arg-button
+      variant="primary"
+      size="lg"
+      class="banner__acao"
+      routerLink="/agendar/profissional"
+    >
+      <arg-icon name="calendar" /> Agendar horário
+    </a>
+  </section>
+
+  <article arg-card>
+    <h2 arg-card-title class="com-icone">
+      <arg-icon name="sparkles" />
+      <a arg-card-link routerLink="/shop">Shop</a>
+    </h2>
+    <p arg-card-description>Produtos que usamos na barbearia. Separe o seu e pague na hora.</p>
+  </article>
 
   <app-como-chegar />
-
-  <section class="pilha" aria-labelledby="shop-titulo">
-    <div class="acoes">
-      <h2 id="shop-titulo">Shop</h2>
-      <a arg-link routerLink="/shop">Ver todos os produtos</a>
-    </div>
-    <ul class="grade">
-      @for (produto of destaques(); track produto.id) {
-        <li><app-produto-card [produto]="produto" /></li>
-      }
-    </ul>
-  </section>
 </main>

@@ -1,0 +1,76 @@
+/*
+ * Banner com a arte da barbearia, sempre no tamanho original (533 px de largura): a imagem
+ * nunca é ampliada, então não perde nitidez. Em tela larga, cópias espelhadas preenchem os
+ * lados; a borda espelhada encaixa na original, sem emenda aparente.
+ * O véu por cima garante o contraste do texto sobre os tons de azul.
+ */
+.banner {
+  --banner-arte: url('/img/banner.jpg');
+  --banner-largura: 533px;
+  --banner-veu: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--arg-color-background) 85%, transparent),
+    color-mix(in srgb, var(--arg-color-background) 25%, transparent)
+  );
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--arg-space-6);
+  min-height: 24rem;
+  padding: var(--arg-space-6);
+  border-radius: var(--arg-radius-container);
+  overflow: hidden;
+  background:
+    var(--banner-veu),
+    var(--banner-arte) center top / var(--banner-largura) auto no-repeat,
+    var(--arg-color-background);
+  box-shadow: var(--arg-shadow-lg);
+}
+
+/* Cópias espelhadas à esquerda e à direita da arte central */
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  z-index: -1;
+  width: var(--banner-largura);
+  background:
+    var(--banner-veu),
+    var(--banner-arte) center top / var(--banner-largura) auto no-repeat;
+  transform: scaleX(-1);
+}
+
+.banner::before {
+  right: calc(50% + var(--banner-largura) / 2);
+}
+
+.banner::after {
+  left: calc(50% + var(--banner-largura) / 2);
+}
+
+.banner__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--arg-space-3);
+}
+
+.banner__titulo {
+  margin: 0;
+  font-size: var(--arg-font-size-display);
+  line-height: var(--arg-line-height-heading);
+}
+
+.banner__resumo {
+  margin: 0;
+  font-size: var(--arg-font-size-body-lg);
+}
+
+/* De ponta a ponta do banner */
+.banner__acao {
+  width: 100%;
+  justify-content: center;
+}

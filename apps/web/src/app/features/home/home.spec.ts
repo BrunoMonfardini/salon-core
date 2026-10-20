@@ -15,21 +15,23 @@ describe('Home', () => {
     TestBed.configureTestingModule({ providers: provideTela() });
   });
 
-  it('apresenta a barbearia com nome e resumo', async () => {
-    const el = await renderizar();
-    expect(el.querySelector('h1')?.textContent).toBe(SALON.nome);
-    expect(el.textContent).toContain(SALON.resumo);
-  });
-
-  it('leva para o primeiro passo do agendamento', async () => {
-    const cta = (await renderizar()).querySelector('a[href="/agendar/profissional"]');
+  it('abre com o banner da barbearia: nome, resumo e botão de agendar', async () => {
+    const banner = (await renderizar()).querySelector('.banner');
+    expect(banner?.querySelector('h1')?.textContent).toBe(SALON.nome);
+    expect(banner?.textContent).toContain(SALON.resumo);
+    const cta = banner?.querySelector('a[href="/agendar/profissional"]');
     expect(cta?.textContent).toContain('Agendar horário');
+    expect(cta?.classList).toContain('banner__acao');
   });
 
-  it('destaca só produtos disponíveis e leva para o shop', async () => {
+  it('leva ao shop sem mostrar produtos na tela inicial', async () => {
     const el = await renderizar();
-    const nomes = [...el.querySelectorAll('app-produto-card h3')].map((h) => h.textContent);
-    expect(nomes).toEqual(['Pomada modeladora', 'Óleo para barba']);
-    expect(el.querySelector('a[href="/shop"]')).not.toBeNull();
+    expect(el.querySelector('a[href="/shop"]')?.textContent).toContain('Shop');
+    expect(el.querySelector('app-produto-card')).toBeNull();
+  });
+
+  it('termina com o como chegar', async () => {
+    const main = (await renderizar()).querySelector('main');
+    expect(main?.lastElementChild?.tagName.toLowerCase()).toBe('app-como-chegar');
   });
 });
