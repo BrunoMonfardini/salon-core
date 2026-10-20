@@ -14,32 +14,21 @@
     <ul class="grade">
       @for (opcao of opcoes.value(); track opcao.profissional.id) {
         <li>
-          <article arg-card>
-            <div arg-card-header class="acoes">
-              <arg-avatar
-                [name]="opcao.profissional.nome"
-                [src]="opcao.profissional.foto"
-                decorative
-              />
-              <h2 arg-card-title>
-                <button
-                  arg-card-link
-                  type="button"
-                  [disabled]="!opcao.status.disponivel"
-                  (click)="escolher(opcao.profissional)"
-                >
-                  {{ opcao.profissional.nome }}
-                </button>
-              </h2>
-            </div>
+          <app-opcao-card
+            [titulo]="opcao.profissional.nome"
+            [escolhida]="escolhido()?.id === opcao.profissional.id"
+            [desabilitada]="!opcao.status.disponivel"
+            (escolher)="escolher(opcao.profissional)"
+          >
+            <arg-avatar
+              opcaoMidia
+              [name]="opcao.profissional.nome"
+              [src]="opcao.profissional.foto"
+              decorative
+            />
             <p arg-card-description>{{ opcao.profissional.especialidades.join(' · ') }}</p>
-            <footer arg-card-actions class="acoes">
-              <span arg-badge [tone]="opcao.status.tom">{{ opcao.status.texto }}</span>
-              @if (escolhido()?.id === opcao.profissional.id) {
-                <span arg-badge tone="primary">Escolhido</span>
-              }
-            </footer>
-          </article>
+            <span opcaoRodape arg-badge [tone]="opcao.status.tom">{{ opcao.status.texto }}</span>
+          </app-opcao-card>
         </li>
       }
     </ul>
