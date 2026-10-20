@@ -35,7 +35,36 @@
   align-items: center;
 }
 
+/* Ícone ao lado do texto num título, com o mesmo respiro em todas as telas */
+.com-icone {
+  display: flex;
+  align-items: center;
+  gap: var(--arg-space-2);
+}
+
+/* Texto só para leitor de tela (o .arg-sr-only do Argila é encapsulado nos componentes) */
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .texto-secundario {
   color: var(--arg-color-text-muted);
   margin: 0;
+}
+
+/*
+ * Contorno de um bug do Argila 0.7.0: o host do arg-date-toggle tem pointer-events: none
+ * e o diálogo do calendário, dentro dele, herda isso. Sem esta linha, clicar num dia não
+ * faz nada. Sai daqui quando o Argila corrigir o componente.
+ */
+.arg-date-toggle__dialog {
+  pointer-events: auto;
 }
