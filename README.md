@@ -2,7 +2,7 @@
 
 App de agendamento da barbearia: apresentação, como chegar, escolha do profissional, data e horário, e confirmação. Feito em Angular 22 com o design system [Argila](https://github.com/BrunoMonfardini/Argila).
 
-Este repositório segue o [padrão de pipeline e qualidade de código](https://github.com/BrunoMonfardini/Argila/blob/main/docs/padrao-de-pipeline.md) da empresa. O plano de implementação está em [docs/plano-de-implementacao.md](docs/plano-de-implementacao.md).
+Este repositório segue o [padrão de pipeline e qualidade de código](https://github.com/BrunoMonfardini/Argila/blob/main/docs/padrao-de-pipeline.md) da empresa. O plano de implementação está em [docs/plano-de-implementacao.md](docs/plano-de-implementacao.md), e o layout de cada tela, em [docs/layout-das-telas.md](docs/layout-das-telas.md).
 
 ## Comandos no Git Bash
 
