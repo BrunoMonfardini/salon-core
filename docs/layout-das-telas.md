@@ -35,20 +35,23 @@ Segmento `barbearia` do Argila, em [`core/ui/argila.ts`](../apps/web/src/app/cor
 
 Definidas uma vez em [`styles.css`](../apps/web/src/styles.css). Nenhuma tela repete esse CSS.
 
-| Classe             | O que faz                                                   |
-| ------------------ | ----------------------------------------------------------- |
-| `pagina`           | Coluna central (até `64rem`) com respiro lateral no celular |
-| `pilha`            | Empilha os filhos com `--arg-space-6` entre eles            |
-| `grade`            | Cards lado a lado (mínimo `16rem`), um por linha no celular |
-| `acoes`            | Botões e links em linha, quebrando quando não cabem         |
-| `texto-secundario` | Texto de apoio na cor `--arg-color-text-muted`              |
+| Classe             | O que faz                                                               |
+| ------------------ | ----------------------------------------------------------------------- |
+| `pagina`           | Coluna central (até `64rem`) com respiro lateral no celular             |
+| `pilha`            | Empilha os filhos com `--arg-space-6` entre eles                        |
+| `grade`            | Cards lado a lado (mínimo `16rem`), um por linha no celular             |
+| `acoes`            | Botões e links em linha, quebrando quando não cabem                     |
+| `texto-secundario` | Texto de apoio na cor `--arg-color-text-muted`                          |
+| `com-icone`        | Ícone ao lado do texto num título, com respiro                          |
+| `so-leitor`        | Texto só para leitor de tela (o `.arg-sr-only` do Argila é encapsulado) |
 
 ### Regras para todas as telas
 
 - **Um `h1` por tela.** Seções usam `h2`, títulos de card usam `h3` (no fluxo de agendamento, o card fica em `h2` porque a seção não tem título próprio).
-- **Link externo** abre em outra aba com `rel="noopener"`, ícone `external-link` e o texto "(abre em outra aba)" em `arg-sr-only`.
+- **Link externo** abre em outra aba com `rel="noopener"` e o texto "(abre em outra aba)" em `so-leitor`.
 - **Carregando** mostra `arg-skeleton` no formato do conteúdo, com `aria-busy="true"` na lista.
 - **Nada de cor, espaço ou raio literal:** só tokens `--arg-*`.
+- **Contorno do calendário:** `styles.css` dá `pointer-events: auto` ao diálogo do `arg-date`. No Argila 0.7.0 ele herda `pointer-events: none` e não aceita clique. Sai quando o Argila corrigir.
 
 ---
 
@@ -88,49 +91,58 @@ Definidas uma vez em [`styles.css`](../apps/web/src/styles.css). Nenhuma tela re
 
 **Rota:** `/` · **Componente:** [`features/home/home.ts`](../apps/web/src/app/features/home/home.ts)
 
+Sem produtos na tela inicial: só o acesso ao Shop, para não poluir.
+
 ```text
 ┌────────────────────────────────────┐
-│ Salon Barbearia               (h1) │
-│ Corte, barba e acabamento no       │
-│ capricho, com hora marcada...      │
+│ ╔═ banner ═══════════════════════╗ │
+│ ║ ░░▒▒ arte azul (banner.jpg) ▒▒░║ │
+│ ║ ░▒▒░░▒▒░░▒▒░░▒▒░░▒▒░░▒▒░░▒▒░░▒ ║ │
+│ ║                                ║ │
+│ ║ Salon Barbearia           (h1) ║ │
+│ ║ Corte, barba e acabamento no   ║ │
+│ ║ capricho, com hora marcada...  ║ │
+│ ║ ┌────────────────────────────┐ ║ │
+│ ║ │     📅  Agendar horário     │ ║ │  ← primário, ponta a ponta
+│ ║ └────────────────────────────┘ ║ │
+│ ╚════════════════════════════════╝ │
 │                                    │
-│ ┌────────────────────────────────┐ │
-│ │ 📅  Agendar horário            │ │  ← botão primário, grande
+│ ┌─ card (inteiro clicável) ──────┐ │
+│ │ ✨ Shop                   (h2) │ │  ← leva a /shop
+│ │ Produtos que usamos na         │ │
+│ │ barbearia. Separe o seu e      │ │
+│ │ pague na hora.                 │ │
 │ └────────────────────────────────┘ │
 │                                    │
 │ ┌─ card ─────────────────────────┐ │
 │ │ 📍 Como chegar            (h2) │ │
 │ │ Rua França, 77 - Parque das    │ │
 │ │ Nações, Santo André - SP       │ │
+│ │ [📍 Ver rota no Maps]          │ │
+│ │ [🚗 Chamar Uber] [🚗 Chamar 99] │ │  ← secundários, com ícone
 │ │ ┌────────────────────────────┐ │ │
 │ │ │                            │ │ │
-│ │ │      mapa (16:9)           │ │ │  ← iframe do Google Maps
+│ │ │        mapa (4:3)          │ │ │  ← raio dos cards, no fim
 │ │ │                            │ │ │
 │ │ └────────────────────────────┘ │ │
-│ │ [Ver rota no Maps ↗]           │ │
-│ │ [Chamar Uber ↗] [Chamar 99 ↗]  │ │  ← botões secundários
-│ └────────────────────────────────┘ │
-│                                    │
-│ Shop (h2)    Ver todos os produtos │  ← link para /shop
-│ ┌─ card ─────────────────────────┐ │
-│ │ Pomada modeladora         (h3) │ │
-│ │ Fixação média, efeito seco.    │ │
-│ │ R$ 45,00                       │ │
-│ └────────────────────────────────┘ │
-│ ┌─ card ─────────────────────────┐ │
-│ │ Óleo para barba                │ │
-│ │ ...                            │ │
 │ └────────────────────────────────┘ │
 └────────────────────────────────────┘
 ```
 
-| Bloco            | Componentes                                                                                                                                       | Dados                                      |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| Apresentação     | `a[arg-button] variant="primary" size="lg"`, `arg-icon`                                                                                           | `nome` e `resumo` de `SALON_CONFIG`        |
-| Como chegar      | `section[arg-card]` ([`ComoChegar`](../apps/web/src/app/features/home/como-chegar/como-chegar.ts)), `iframe`, `a[arg-button] variant="secondary"` | `comoChegarLinks(SALON_CONFIG)`            |
-| Destaque do shop | `ul.grade` de `app-produto-card`, `a[arg-link]`                                                                                                   | `ProdutosRepo.listar()`: até 3 disponíveis |
+| Bloco       | Componentes                                                                                                                                       | Dados                               |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| Banner      | `section.banner`, `a[arg-button] variant="primary" size="lg"` com `banner__acao`                                                                  | `nome` e `resumo` de `SALON_CONFIG` |
+| Shop        | `article[arg-card]` com `a[arg-card-link]`                                                                                                        | Fixo; os produtos ficam em `/shop`  |
+| Como chegar | `section[arg-card]` ([`ComoChegar`](../apps/web/src/app/features/home/como-chegar/como-chegar.ts)), `a[arg-button] variant="secondary"`, `iframe` | `comoChegarLinks(SALON_CONFIG)`     |
 
-**Estados:** enquanto os produtos carregam, a grade fica vazia (o resto da tela já aparece).
+**Banner** ([`home.css`](../apps/web/src/app/features/home/home.css)):
+
+- A arte fica em [`public/img/banner.jpg`](../apps/web/public/img/banner.jpg) (533 × 1600 px), copiada sem recompressão.
+- Ela **nunca é ampliada**: aparece no tamanho original, alinhada ao topo. Em tela larga, cópias espelhadas preenchem os lados, e a borda espelhada encaixa na original, sem emenda.
+- Um véu do fundo (`--arg-color-background` com transparência, mais forte embaixo) garante o contraste do texto.
+- O botão de agendar ocupa a largura toda do banner.
+
+**Ícones dos botões:** `map-pin` para a rota e um ícone de carro para Uber e 99. O Argila 0.7.0 não tem carro: ele é registrado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts) (`ICONE_CARRO`), no mesmo traço dos ícones do Argila.
 
 ---
 
@@ -235,6 +247,7 @@ Envolve os três passos. Só o miolo troca de um passo para outro.
 
 - O status considera o **serviço mais curto** do profissional (o mais otimista). O passo 2 refina pelo serviço escolhido.
 - Cálculo em [`core/agenda/disponibilidade.ts`](../apps/web/src/app/core/agenda/disponibilidade.ts) e texto em [`status.ts`](../apps/web/src/app/features/booking/profissional/status.ts).
+- Cada card é um [`OpcaoCard`](../apps/web/src/app/shared/ui/opcao-card/opcao-card.ts), o mesmo dos serviços no passo 2: card inteiro clicável, `aria-pressed`, borda e selo "Escolhido" na opção escolhida.
 - **Carregando:** 3 `arg-skeleton` na grade.
 - **Ao escolher:** grava no store e vai para `/agendar/horario`.
 
@@ -250,10 +263,22 @@ Os blocos aparecem em sequência, conforme o cliente decide: serviço → data �
 │ Serviço, data e horário       (h1) │
 │ Com Rafael.                        │
 │                                    │
-│ Serviço                            │  ← arg-choice-group
-│ ( ) Corte · 30 min · R$ 50,00      │
-│ (•) Barba · 30 min · R$ 40,00      │
-│ ( ) Corte e barba · 60 min · R$ 80 │
+│ Serviço                       (h2) │
+│ ┌─ card (inteiro clicável) ──────┐ │  ← app-opcao-card, nível 3
+│ │ Corte                     (h3) │ │
+│ │ 🕐 30 min                      │ │
+│ │ R$ 50,00   [Escolhido]         │ │  ← borda primária quando escolhido
+│ └────────────────────────────────┘ │
+│ ┌─ card ─────────────────────────┐ │
+│ │ Barba                          │ │
+│ │ 🕐 30 min                      │ │
+│ │ R$ 40,00                       │ │
+│ └────────────────────────────────┘ │
+│ ┌─ card ─────────────────────────┐ │
+│ │ Corte e barba                  │ │
+│ │ 🕐 60 min                      │ │
+│ │ R$ 80,00                       │ │
+│ └────────────────────────────────┘ │
 │                                    │
 │ Data                               │  ← só depois do serviço
 │ ┌──────────────────────────┬─────┐ │
@@ -274,12 +299,12 @@ Os blocos aparecem em sequência, conforme o cliente decide: serviço → data �
 │                                    │    ter os três
 ```
 
-| Bloco     | Componente                             | Regra                                                                   |
-| --------- | -------------------------------------- | ----------------------------------------------------------------------- |
-| Serviço   | `arg-choice-group` + `arg-radio`       | Só os serviços do profissional; rótulo por `rotuloDoServico`            |
-| Data      | `arg-field` + `input[arg-date]`        | De hoje até o 14º dia; bloqueia dias sem horário em que o serviço caiba |
-| Horário   | `fieldset[arg-time-slots]`             | Início a cada 30 min; ocupado se choca com a agenda ou já passou        |
-| Continuar | `button[arg-button] variant="primary"` | Habilita com serviço, data e horário; vai para `/agendar/confirmar`     |
+| Bloco     | Componente                             | Regra                                                                         |
+| --------- | -------------------------------------- | ----------------------------------------------------------------------------- |
+| Serviço   | `app-opcao-card` em `ul.grade`         | Só os serviços do profissional, com duração e preço; o escolhido fica marcado |
+| Data      | `arg-field` + `input[arg-date]`        | De hoje até o 14º dia; bloqueia dias sem horário em que o serviço caiba       |
+| Horário   | `fieldset[arg-time-slots]`             | Início a cada 30 min; ocupado se choca com a agenda ou já passou              |
+| Continuar | `button[arg-button] variant="primary"` | Habilita com serviço, data e horário; vai para `/agendar/confirmar`           |
 
 - Trocar o serviço limpa o horário (a duração muda o que cabe). Trocar a data também.
 - Dia sem nenhum horário livre: o `arg-time-slots` mostra "Nenhum horário livre neste dia."
