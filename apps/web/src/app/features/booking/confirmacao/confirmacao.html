@@ -1,0 +1,57 @@
+@if (confirmado(); as feito) {
+  <section class="pilha" aria-labelledby="concluido-titulo">
+    <header class="pilha">
+      <h1 id="concluido-titulo"><arg-icon name="check" /> Agendamento confirmado</h1>
+      <p class="texto-secundario">Te esperamos lá. O pagamento é feito na barbearia.</p>
+    </header>
+    <app-resumo [escolhas]="feito" />
+    <div class="acoes">
+      <a arg-button variant="primary" [href]="feito.ics" download="agendamento.ics">
+        <arg-icon name="calendar" /> Adicionar à minha agenda
+      </a>
+      <a arg-button variant="secondary" [href]="rota" target="_blank" rel="noopener">
+        Como chegar <arg-icon name="external-link" />
+        <span class="arg-sr-only">(abre em outra aba)</span>
+      </a>
+      <a arg-button variant="tertiary" routerLink="/">Voltar ao início</a>
+    </div>
+  </section>
+} @else if (escolhas(); as escolhas) {
+  <section class="pilha" aria-labelledby="confirmacao-titulo">
+    <header class="pilha">
+      <h1 id="confirmacao-titulo">Confirme seu horário</h1>
+      <p class="texto-secundario">Seu nome e telefone vão para a agenda do profissional.</p>
+    </header>
+
+    <app-resumo [escolhas]="escolhas" />
+
+    @if (conflito()) {
+      <div arg-alert tone="warning" heading="Esse horário acabou de ser ocupado">
+        Escolha outro horário; o profissional, o serviço e a data continuam os mesmos.
+        <button
+          arg-button
+          arg-alert-action
+          variant="secondary"
+          type="button"
+          (click)="escolherOutroHorario()"
+        >
+          Escolher outro horário
+        </button>
+      </div>
+    }
+
+    <form class="pilha" [formGroup]="form" (ngSubmit)="confirmar()">
+      <arg-field label="Nome" [error]="erro('nome')" required>
+        <input arg-input formControlName="nome" autocomplete="name" />
+      </arg-field>
+      <arg-field label="Celular com DDD" [error]="erro('telefone')" required>
+        <input arg-mask="phone" formControlName="telefone" autocomplete="tel" inputmode="tel" />
+      </arg-field>
+      <div class="acoes">
+        <button arg-button variant="primary" type="submit" [loading]="enviando()">
+          Confirmar agendamento
+        </button>
+      </div>
+    </form>
+  </section>
+}
