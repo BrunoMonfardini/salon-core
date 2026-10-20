@@ -1,0 +1,25 @@
+<main class="pagina pilha">
+  <header class="pilha">
+    <h1>{{ salon.nome }}</h1>
+    <p class="texto-secundario">{{ salon.resumo }}</p>
+    <div class="acoes">
+      <a arg-button variant="primary" size="lg" routerLink="/agendar/profissional">
+        <arg-icon name="calendar" /> Agendar horário
+      </a>
+    </div>
+  </header>
+
+  <app-como-chegar />
+
+  <section class="pilha" aria-labelledby="shop-titulo">
+    <div class="acoes">
+      <h2 id="shop-titulo">Shop</h2>
+      <a arg-link routerLink="/shop">Ver todos os produtos</a>
+    </div>
+    <ul class="grade">
+      @for (produto of destaques(); track produto.id) {
+        <li><app-produto-card [produto]="produto" /></li>
+      }
+    </ul>
+  </section>
+</main>
