@@ -1,0 +1,57 @@
+<section class="pilha" aria-labelledby="horario-titulo">
+  <header class="pilha">
+    <h1 id="horario-titulo">Serviço, data e horário</h1>
+    <p class="texto-secundario">Com {{ store.profissional()?.nome }}.</p>
+  </header>
+
+  <arg-choice-group label="Serviço" name="servico">
+    @for (servico of servicosDoProfissional(); track servico.id) {
+      <label arg-choice>
+        <input
+          type="radio"
+          arg-radio
+          name="servico"
+          [value]="servico.id"
+          [checked]="store.servico()?.id === servico.id"
+          (change)="escolherServico(servico)"
+        />
+        {{ rotuloDoServico(servico) }}
+      </label>
+    }
+  </arg-choice-group>
+
+  @if (store.servico()) {
+    <arg-field label="Data" hint="Os dias sem horário livre ficam bloqueados no calendário.">
+      <input
+        arg-date
+        [value]="store.data()"
+        (valueChange)="escolherData($event)"
+        [min]="hoje"
+        [max]="ultimoDia"
+        [blocked]="diaBloqueado()"
+      />
+    </arg-field>
+  }
+
+  @if (store.data()) {
+    <fieldset
+      arg-time-slots
+      label="Horário"
+      [slots]="horarios()"
+      [value]="store.horario()"
+      (valueChange)="escolherHorario($event)"
+    ></fieldset>
+  }
+
+  <div class="acoes">
+    <button
+      arg-button
+      variant="primary"
+      type="button"
+      [disabled]="!podeContinuar()"
+      (click)="continuar()"
+    >
+      Continuar
+    </button>
+  </div>
+</section>
