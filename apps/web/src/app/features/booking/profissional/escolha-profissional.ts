@@ -1,16 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject, resource } from '@angular/core';
 import { Router } from '@angular/router';
-import { ARG_CARD, ArgAvatar, ArgBadge, ArgSkeleton, addDays } from '@brunomonfardini/ui';
+import { ArgAvatar, ArgBadge, ArgSkeleton, addDays } from '@brunomonfardini/ui';
 import { AGORA, DIAS_DE_AGENDA, proximoHorario } from '../../../core/agenda/disponibilidade';
 import { BookingStore } from '../../../core/booking/booking.store';
 import { AgendaRepo, ProfissionaisRepo, ServicosRepo } from '../../../core/data/repos';
 import { Profissional } from '../../../core/models';
+import { OpcaoCard } from '../../../shared/ui/opcao-card/opcao-card';
 import { urlDoPasso } from '../passos';
 import { statusDoProfissional } from './status';
 
 @Component({
   selector: 'app-escolha-profissional',
-  imports: [ARG_CARD, ArgAvatar, ArgBadge, ArgSkeleton],
+  imports: [ArgAvatar, ArgBadge, ArgSkeleton, OpcaoCard],
   templateUrl: './escolha-profissional.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
