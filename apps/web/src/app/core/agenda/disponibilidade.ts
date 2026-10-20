@@ -56,6 +56,11 @@ export function periodoDe(data: string, inicio: number, duracaoMin: number): Per
   return { inicio: `${data}T${toTime(inicio)}`, fim: `${data}T${toTime(inicio + duracaoMin)}` };
 }
 
+/** Os dias da janela de agenda, a partir de hoje. */
+export function diasDaJanela(agora: Agora, dias = DIAS_DE_AGENDA): string[] {
+  return Array.from({ length: dias }, (_, i) => addDays(agora.data, i));
+}
+
 export interface ProximoHorario {
   readonly data: string;
   readonly horario: string;
@@ -69,12 +74,26 @@ export function proximoHorario(
   agora: Agora,
   dias = DIAS_DE_AGENDA,
 ): ProximoHorario | null {
-  for (let i = 0; i < dias; i++) {
-    const data = addDays(agora.data, i);
+  for (const data of diasDaJanela(agora, dias)) {
     const livre = horariosDoDia(expediente, data, duracaoMin, ocupados, agora).find(
       (h) => h.available,
     );
     if (livre) return { data, horario: livre.time };
   }
   return null;
+}
+
+/** Os dias da janela com pelo menos um horário livre para o serviço. */
+export function diasComVaga(
+  expediente: Expediente,
+  duracaoMin: number,
+  ocupados: readonly Periodo[],
+  agora: Agora,
+  dias = DIAS_DE_AGENDA,
+): Set<string> {
+  return new Set(
+    diasDaJanela(agora, dias).filter((data) =>
+      horariosDoDia(expediente, data, duracaoMin, ocupados, agora).some((h) => h.available),
+    ),
+  );
 }

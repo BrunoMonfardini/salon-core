@@ -1,7 +1,14 @@
 import { describe, expect, it } from '@jest/globals';
 import { TestBed } from '@angular/core/testing';
 import { Expediente } from '../models';
-import { AGORA, agoraDe, horariosDoDia, periodoDe, proximoHorario } from './disponibilidade';
+import {
+  AGORA,
+  agoraDe,
+  diasComVaga,
+  horariosDoDia,
+  periodoDe,
+  proximoHorario,
+} from './disponibilidade';
 
 // 2026-10-20 é terça (2); 2026-10-25, domingo (0)
 const TERCA = '2026-10-20';
@@ -91,5 +98,16 @@ describe('relógio', () => {
   it('o padrão lê a hora atual', () => {
     const antes = agoraDe(new Date());
     expect(TestBed.inject(AGORA)().data).toBe(antes.data);
+  });
+});
+
+describe('diasComVaga', () => {
+  it('só os dias de expediente com horário livre, dentro da janela', () => {
+    expect([...diasComVaga(expediente, 30, [], madrugada, 8)]).toEqual([TERCA, '2026-10-27']);
+  });
+
+  it('um dia com a agenda cheia fica de fora', () => {
+    const cheio = [{ inicio: `${TERCA}T09:00`, fim: `${TERCA}T14:00` }];
+    expect([...diasComVaga(expediente, 30, cheio, madrugada, 7)]).toEqual([]);
   });
 });
