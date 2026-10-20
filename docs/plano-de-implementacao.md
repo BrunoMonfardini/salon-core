@@ -6,7 +6,7 @@ App de agendamento da barbearia em Angular 22 + pnpm, com o design system
 da empresa e a estrutura de `.github` do
 [ai-memory](https://github.com/akitaonrails/ai-memory/tree/main/.github).
 
-> Status: **em execução.** Passos 1 a 3 feitos (workspace, esteira e núcleo); telas a seguir.
+> Status: **telas prontas.** Workspace, esteira, núcleo e as quatro telas estão na `main`. O que falta está em [próximos passos](proximos-passos.md).
 
 ---
 
