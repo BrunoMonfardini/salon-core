@@ -29,7 +29,7 @@ Segmento `barbearia` do Argila, em [`core/ui/argila.ts`](../apps/web/src/app/cor
 | Modo de cor             | `dark`, fixo                                                   |
 | Cores de marca          | primária `ardosia`, secundária `petroleo`, destaque `mostarda` |
 | Opacidade da superfície | `0.65`                                                         |
-| Fundo                   | `degrade`, quando o Argila 0.8.0 sair (hoje, liso)             |
+| Fundo                   | `degrade`: manchas leves das cores de marca                    |
 
 ### Classes de layout
 
@@ -51,7 +51,6 @@ Definidas uma vez em [`styles.css`](../apps/web/src/styles.css). Nenhuma tela re
 - **Link externo** abre em outra aba com `rel="noopener"` e o texto "(abre em outra aba)" em `so-leitor`.
 - **Carregando** mostra `arg-skeleton` no formato do conteúdo, com `aria-busy="true"` na lista.
 - **Nada de cor, espaço ou raio literal:** só tokens `--arg-*`.
-- **Contorno do calendário:** `styles.css` dá `pointer-events: auto` ao diálogo do `arg-date`. No Argila 0.7.0 ele herda `pointer-events: none` e não aceita clique. Sai quando o Argila corrigir.
 
 ---
 
@@ -142,7 +141,7 @@ Sem produtos na tela inicial: só o acesso ao Shop, para não poluir.
 - Um véu do fundo (`--arg-color-background` com transparência, mais forte embaixo) garante o contraste do texto.
 - O botão de agendar ocupa a largura toda do banner.
 
-**Ícones dos botões:** `map-pin` para a rota e um ícone de carro para Uber e 99. O Argila 0.7.0 não tem carro: ele é registrado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts) (`ICONE_CARRO`), no mesmo traço dos ícones do Argila.
+**Ícones dos botões:** `map-pin` para a rota e `car` (do Argila) para Uber e 99.
 
 ---
 
