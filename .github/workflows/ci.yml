@@ -41,7 +41,21 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm typecheck
+      # Cobertura e histórico da main: o PR compara com ela, a main acrescenta ao histórico
+      - name: Cobertura da main
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: cobertura-main
+          key: cobertura-main-${{ github.event.pull_request.base.sha || github.sha }}
+          restore-keys: cobertura-main-
       - run: pnpm test
+      - name: Resumo dos testes
+        if: ${{ !cancelled() && hashFiles('reports/junit.xml', 'coverage/coverage-summary.json') != '' }}
+        env:
+          HISTORICO: ${{ github.event_name == 'push' && '--historico cobertura-main/historico.csv' || '' }}
+        run: |
+          mkdir -p cobertura-main
+          pnpm --silent test:report --base cobertura-main/coverage-summary.json $HISTORICO >> "$GITHUB_STEP_SUMMARY"
       - name: Relatórios dos testes
         if: ${{ !cancelled() && hashFiles('reports/junit.xml') != '' }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -51,6 +65,22 @@ jobs:
             reports
             coverage
           retention-days: 14
+      - name: Guarda a cobertura da main
+        if: github.event_name == 'push'
+        run: cp coverage/coverage-summary.json cobertura-main/
+      - name: Cobertura da main para os próximos PRs
+        if: github.event_name == 'push'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: cobertura-main
+          key: cobertura-main-${{ github.sha }}
+      - name: Histórico da cobertura
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: cobertura-main
+          path: cobertura-main
+          retention-days: 90
       - run: pnpm dup:check
       - run: pnpm build
 
