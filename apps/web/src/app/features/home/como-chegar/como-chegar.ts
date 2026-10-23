@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ARG_CARD, ArgButton, ArgIcon, ArgIconName } from '@brunomonfardini/ui';
 import { SALON_CONFIG, enderecoCompleto } from '../../../core/config/salon.config';
-import { ICONE_CARRO } from '../../../core/ui/argila';
 import { comoChegarLinks } from '../../../shared/links/como-chegar';
 
 interface Acao {
@@ -27,7 +26,7 @@ export class ComoChegar {
   protected readonly mapa = inject(DomSanitizer).bypassSecurityTrustResourceUrl(this.links.mapa);
   protected readonly acoes: readonly Acao[] = [
     { rotulo: 'Ver rota no Maps', url: this.links.rota, icone: 'map-pin' },
-    { rotulo: 'Chamar Uber', url: this.links.uber, icone: ICONE_CARRO },
-    { rotulo: 'Chamar 99', url: this.links.noventaENove, icone: ICONE_CARRO },
+    { rotulo: 'Chamar Uber', url: this.links.uber, icone: 'car' },
+    { rotulo: 'Chamar 99', url: this.links.noventaENove, icone: 'car' },
   ];
 }
