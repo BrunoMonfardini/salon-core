@@ -10,7 +10,7 @@ Pronto na `main`, com CI verde:
 
 - As quatro telas do plano: início com banner e como chegar, escolha do profissional, serviço, data e horário, e confirmação. Mais a página do shop.
 - Esteira de CI (`verify`, `pr-checks`, gitleaks) e `main` protegida.
-- Argila 0.7.0 com o segmento `transparente` escuro.
+- Argila 0.8.0 com o segmento `transparente` escuro e o fundo em degradê.
 - Documentação: [plano](plano-de-implementacao.md) e [layout das telas](layout-das-telas.md).
 
 Ainda é protótipo:
@@ -24,7 +24,7 @@ Ainda é protótipo:
 | --- | ------------------------------------------------------------ | ------------- | --------------------------------------- |
 | 1   | [Deploy na Vercel](#1-deploy-na-vercel)                      | Você e código | Mostrar o app para clientes             |
 | 2   | [Dados reais da barbearia](#2-dados-reais-da-barbearia)      | Você          | Conteúdo certo nas telas                |
-| 3   | [Pendências no Argila](#3-pendências-no-argila)              | Código        | Remover os contornos do app             |
+| 3   | [Pendências no Argila](#3-pendências-no-argila)              | Feito         | Remover os contornos do app             |
 | 4   | [Supabase: agenda de verdade](#4-supabase-agenda-de-verdade) | Você e código | Agendamentos que persistem              |
 | 5   | [Área do barbeiro](#5-área-do-barbeiro)                      | Código        | Cada barbeiro gerencia a própria agenda |
 | 6   | [Avisos ao cliente](#6-avisos-ao-cliente)                    | Você e código | Menos faltas                            |
@@ -84,22 +84,17 @@ Tudo isso mora em um arquivo só, [`core/config/salon.config.ts`](../apps/web/sr
 
 ## 3. Pendências no Argila
 
-O salon-core contorna três limitações do Argila 0.7.0. O contorno sai do app no PR que atualizar para a versão com a correção.
+Concluído com o Argila 0.8.0, que saiu pelos PRs [#131](https://github.com/BrunoMonfardini/Argila/pull/131) e [#118](https://github.com/BrunoMonfardini/Argila/pull/118):
 
-- [x] **Código:** [PR #131 do Argila](https://github.com/BrunoMonfardini/Argila/pull/131) com a correção do calendário (e um teste que falha sem ela) e o ícone `car`, com CI verde.
-- [ ] **Você:** aprovar e fazer o merge do #131. Como no #118, o ruleset do Argila exige a aprovação de outra pessoa.
-- [ ] **Código:** depois da versão publicada, tirar o contorno do calendário do `styles.css` e trocar o `ICONE_CARRO` pelo `argIconCar`.
+- [x] **Calendário do `arg-date` aceita clique.** O contorno saiu do `styles.css` do app, e o teste de ponta a ponta confirma o clique sem ele.
+- [x] **Ícone `car`** do Argila nos botões do Uber e da 99, no lugar do ícone registrado à mão.
+- [x] **Fundo em degradê** ligado no segmento `barbearia`.
+- [x] **`.arg-sr-only`:** continua interno no Argila, de propósito (`internal/sr-only.css`). O `.so-leitor` do app fica.
 
-| Pendência                                                                                                                          | Contorno hoje no salon-core                                                                                  | Correção no Argila                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Calendário do `arg-date` não aceita clique: o diálogo herda `pointer-events: none` do host. Acontece também no catálogo publicado. | `pointer-events: auto` em [`styles.css`](../apps/web/src/styles.css)                                         | `pointer-events: auto` no `.arg-date-toggle__dialog`, com teste de clique                             |
-| Sem ícone de carro                                                                                                                 | `ICONE_CARRO` registrado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts), com o nome forçado | Ícone `car` no conjunto do Argila                                                                     |
-| `.arg-sr-only` só existe dentro dos componentes                                                                                    | `.so-leitor` global em [`styles.css`](../apps/web/src/styles.css)                                            | Não entra: no Argila ele é interno de propósito (`internal/sr-only.css`). O `.so-leitor` do app fica. |
+Ficam para quando fizer sentido:
 
-**Versão 0.8.0:**
-
-- [ ] **Você:** fazer o merge do [PR #118 do Argila](https://github.com/BrunoMonfardini/Argila/pull/118). O ruleset de lá exige 1 aprovação de outra pessoa e você é o autor, então é preciso uma revisão ou um bypass. A permissão de publicação já foi corrigida e a 0.7.0 saiu por ela.
-- [ ] **Código:** atualizar para a 0.8.0 e ligar `background: 'degrade'` no segmento, que hoje está comentado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts). Conferir se a 0.8.0 exporta o `arg-calendar` sozinho. Se exportar, avaliar o calendário aberto na tela, sem diálogo.
+- [ ] **Calendário aberto na tela, sem diálogo:** a 0.8.0 ainda não exporta o `arg-calendar` sozinho.
+- [ ] **Fundo de imagem** (novo na 0.8.0, `background: 'imagem'`): dá para usar a arte do banner como fundo da página inteira, desfocada. Decisão de visual.
 
 ---
 
