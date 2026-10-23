@@ -27,8 +27,8 @@ importers:
         specifier: ^22.2.0
         version: 22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(@angular/platform-browser@22.2.3(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@brunomonfardini/ui':
-        specifier: ^0.7.0
-        version: 0.7.0(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))
+        specifier: ^0.8.0
+        version: 0.8.0(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -542,8 +542,8 @@ packages:
     resolution: {integrity: sha512-0GEz8qJWokkUVYQYRukmkSHIFNoBH8QTreeHrAFbvz1XFYc3Y+puhMs8PQ5x8GNugiC2l5jvDBXKLbBIByeSBw==}
     hasBin: true
 
-  '@brunomonfardini/ui@0.7.0':
-    resolution: {integrity: sha512-63yWpL+heXagrmG5Hmx225OYrQOhFk/7C3ljXtU8BGOWS1RfTKO8AKvD9xc3tmPlOctM5U6KV8kzRE9+b5WnUA==, tarball: https://npm.pkg.github.com/download/@brunomonfardini/ui/0.7.0/b56394af651e9f612f0bd0a68d2e5da01ff61ab6}
+  '@brunomonfardini/ui@0.8.0':
+    resolution: {integrity: sha512-4Qzn4VrTwUfNCIqjXFEinNz2/2lR4PyP4h9T1doPpr+mI3bdbFzq5Zl5cQSOnAuMDT163WNlTWAhLllN3L7FHA==, tarball: https://npm.pkg.github.com/download/@brunomonfardini/ui/0.8.0/da3d901ecc00d9f009a185bc9041cb5220c17cbb}
     peerDependencies:
       '@angular/common': ^22.2.0
       '@angular/core': ^22.2.0
@@ -4860,7 +4860,7 @@ snapshots:
     dependencies:
       css-tree: 3.2.1
 
-  '@brunomonfardini/ui@0.7.0(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))':
+  '@brunomonfardini/ui@0.8.0(@angular/common@22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))':
     dependencies:
       '@angular/common': 22.2.3(@angular/core@22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2))(rxjs@7.8.2)
       '@angular/core': 22.2.3(@angular/compiler@22.2.3)(rxjs@7.8.2)
