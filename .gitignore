@@ -30,6 +30,8 @@ __screenshots__/
 .DS_Store
 Thumbs.db
 
-# Relatórios dos testes (JUnit) e histórico da cobertura
+# Relatórios dos testes (JUnit e e2e) e histórico da cobertura
 /reports
 /cobertura-main
+/test-results
+/playwright-report
