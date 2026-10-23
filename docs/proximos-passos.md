@@ -84,13 +84,17 @@ Tudo isso mora em um arquivo só, [`core/config/salon.config.ts`](../apps/web/sr
 
 ## 3. Pendências no Argila
 
-O salon-core contorna três limitações do Argila 0.7.0. Cada uma se resolve no Argila, e o contorno sai do app no PR que atualizar a versão.
+O salon-core contorna três limitações do Argila 0.7.0. O contorno sai do app no PR que atualizar para a versão com a correção.
 
-| Pendência                                                                                                                          | Contorno hoje no salon-core                                                                                  | Correção no Argila                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| Calendário do `arg-date` não aceita clique: o diálogo herda `pointer-events: none` do host. Acontece também no catálogo publicado. | `pointer-events: auto` em [`styles.css`](../apps/web/src/styles.css)                                         | `pointer-events: auto` no `.arg-date-toggle__dialog`, com teste de clique |
-| Sem ícone de carro                                                                                                                 | `ICONE_CARRO` registrado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts), com o nome forçado | Ícone `car` no conjunto do Argila                                         |
-| `.arg-sr-only` só existe dentro dos componentes                                                                                    | `.so-leitor` global em [`styles.css`](../apps/web/src/styles.css)                                            | Utilitário de leitor de tela no `base.css`                                |
+- [x] **Código:** [PR #131 do Argila](https://github.com/BrunoMonfardini/Argila/pull/131) com a correção do calendário (e um teste que falha sem ela) e o ícone `car`, com CI verde.
+- [ ] **Você:** aprovar e fazer o merge do #131. Como no #118, o ruleset do Argila exige a aprovação de outra pessoa.
+- [ ] **Código:** depois da versão publicada, tirar o contorno do calendário do `styles.css` e trocar o `ICONE_CARRO` pelo `argIconCar`.
+
+| Pendência                                                                                                                          | Contorno hoje no salon-core                                                                                  | Correção no Argila                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Calendário do `arg-date` não aceita clique: o diálogo herda `pointer-events: none` do host. Acontece também no catálogo publicado. | `pointer-events: auto` em [`styles.css`](../apps/web/src/styles.css)                                         | `pointer-events: auto` no `.arg-date-toggle__dialog`, com teste de clique                             |
+| Sem ícone de carro                                                                                                                 | `ICONE_CARRO` registrado em [`core/ui/argila.ts`](../apps/web/src/app/core/ui/argila.ts), com o nome forçado | Ícone `car` no conjunto do Argila                                                                     |
+| `.arg-sr-only` só existe dentro dos componentes                                                                                    | `.so-leitor` global em [`styles.css`](../apps/web/src/styles.css)                                            | Não entra: no Argila ele é interno de propósito (`internal/sr-only.css`). O `.so-leitor` do app fica. |
 
 **Versão 0.8.0:**
 
@@ -168,8 +172,8 @@ Ideias para depois do Supabase. Nenhuma está decidida.
 
 Para fechar o [padrão de pipeline](https://github.com/BrunoMonfardini/Argila/blob/main/docs/padrao-de-pipeline.md) da empresa:
 
-- [ ] **Resumo dos testes no PR:** o `verify` publica total, falhas, cobertura e os testes mais lentos, e falha se a cobertura cair mais de 0,5 ponto em relação à `main`. Copiar o `scripts/relatorio-de-testes.ts` e os passos de cache do `ci.yml` do Argila.
-- [ ] **Teste de ponta a ponta:** um teste no navegador do fluxo inteiro, do início ao "Agendamento confirmado", incluindo o clique no calendário. Esse bug só apareceu no navegador, não nos testes unitários.
+- [x] **Resumo dos testes no PR:** o `verify` publica total, falhas, cobertura e os testes mais lentos, e falha se a cobertura cair mais de 0,5 ponto em relação à `main`. Copiado do Argila: [`scripts/relatorio-de-testes.ts`](../scripts/relatorio-de-testes.ts) e os passos de cache no `ci.yml`.
+- [x] **Teste de ponta a ponta:** um teste no navegador do fluxo inteiro, do início ao "Agendamento confirmado", incluindo o clique no calendário. Esse bug só apareceu no navegador, não nos testes unitários. Feito com Playwright em [`e2e/`](../e2e/agendamento.e2e.ts), no celular e no desktop, rodando no `verify`; sem o contorno do calendário, ele falha.
 - [ ] **Tamanho do bundle:** o carregamento inicial está em 443 kB, e o aviso do orçamento dispara em 500 kB. Investigar o que do Argila entra no carregamento inicial antes de crescer mais.
 - [ ] **Acessibilidade e desempenho:** rodar o Lighthouse nas telas publicadas e corrigir o que aparecer.
 - [ ] **Ruleset:** quando entrar outra pessoa no time, voltar a aprovação obrigatória para 1, no GitHub e em [`.github/rulesets/main.json`](../.github/rulesets/main.json).

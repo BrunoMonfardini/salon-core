@@ -17,16 +17,18 @@ npm run dev
 
 Instale dependências só com `pnpm install`: o `npm install` ignora o `pnpm-lock.yaml`.
 
-| Script               | O que faz                                      |
-| -------------------- | ---------------------------------------------- |
-| `npm run dev`        | Sobe o app em `http://localhost:4200`          |
-| `npm run test`       | Testes unitários com cobertura (mínimo de 80%) |
-| `npm run test:watch` | Testes em modo watch, sem cobertura            |
-| `npm run lint`       | ESLint sem nenhum aviso permitido              |
-| `npm run typecheck`  | Checagem de tipos do app e dos testes          |
-| `npm run dup:check`  | Procura código duplicado (limite de 3%)        |
-| `npm run format`     | Formata tudo com o Prettier                    |
-| `npm run build`      | Build de produção em `dist/web`                |
+| Script                | O que faz                                                    |
+| --------------------- | ------------------------------------------------------------ |
+| `npm run dev`         | Sobe o app em `http://localhost:4200`                        |
+| `npm run test`        | Testes unitários com cobertura (mínimo de 80%)               |
+| `npm run test:watch`  | Testes em modo watch, sem cobertura                          |
+| `npm run test:report` | Resumo dos testes e cobertura por projeto (depois do `test`) |
+| `npm run e2e`         | Testes de ponta a ponta no navegador (Playwright)            |
+| `npm run lint`        | ESLint sem nenhum aviso permitido                            |
+| `npm run typecheck`   | Checagem de tipos do app e dos testes                        |
+| `npm run dup:check`   | Procura código duplicado (limite de 3%)                      |
+| `npm run format`      | Formata tudo com o Prettier                                  |
+| `npm run build`       | Build de produção em `dist/web`                              |
 
 ## Onde fica cada coisa
 
