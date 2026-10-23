@@ -34,30 +34,34 @@ Ainda é protótipo:
 
 ## 1. Deploy na Vercel
 
-Decidido no plano: Vercel, com o mesmo fluxo do catálogo do Argila.
+Decidido no plano: Vercel, com o mesmo fluxo do catálogo do Argila. O build roda no GitHub Actions e a Vercel só recebe os arquivos prontos: ela não compila nada nem precisa de token do GitHub para instalar o Argila.
+
+**Código (feito):**
+
+- [x] `apps/web/public/vercel.json` com fallback de rotas para o `index.html`, para `/shop` e `/agendar/horario` abrirem direto. É igual ao do catálogo do Argila.
+- [x] [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml): merge na `main` publica em **staging** (deploy de preview da Vercel); **produção** é por disparo manual em Actions → Deploy → Run workflow. Sem os secrets da Vercel, o workflow só avisa e termina.
+- [x] Environments `staging` e `production` criados no GitHub. `production` exige a sua aprovação e só aceita a `main`.
 
 **Você:**
 
-- [ ] Importar o repositório em <https://vercel.com/new>.
-- [ ] Configurar o projeto:
+- [ ] Criar o projeto na Vercel: em <https://vercel.com/new>, escolher **Import Third-Party Git Repository** ou criar um projeto vazio chamado `salon-core`. Não precisa configurar build, porque a Vercel só recebe os arquivos prontos.
+- [ ] Em **Settings → General** do projeto, copiar o **Project ID**. Em **Settings** da conta ou do time, copiar o **Team ID** (ou User ID).
+- [ ] Criar um token em <https://vercel.com/account/tokens>.
+- [ ] Cadastrar os três como secrets do repositório (Settings → Secrets and variables → Actions):
 
-  | Campo            | Valor                                                                             |
-  | ---------------- | --------------------------------------------------------------------------------- |
-  | Install Command  | `pnpm install --frozen-lockfile`                                                  |
-  | Build Command    | `pnpm build`                                                                      |
-  | Output Directory | `dist/web/browser`                                                                |
-  | Variável         | `NODE_AUTH_TOKEN`: token do GitHub só com `read:packages`, para instalar o Argila |
+  | Secret              | Valor                |
+  | ------------------- | -------------------- |
+  | `VERCEL_TOKEN`      | O token criado       |
+  | `VERCEL_ORG_ID`     | Team ID (ou User ID) |
+  | `VERCEL_PROJECT_ID` | Project ID           |
 
-- [ ] Criar os Environments `staging` e `production` no GitHub (Settings → Environments), com aprovação manual em `production`.
-- [ ] Cadastrar o `VERCEL_TOKEN` nos dois Environments.
+- [ ] Se o projeto foi importado do GitHub, desligar o build automático da Vercel (**Settings → Git → Ignored Build Step**: `exit 0`), para não publicar duas vezes.
 
-**Código:**
+**Código (depois dos secrets):**
 
-- [ ] `apps/web/public/vercel.json` com fallback de rotas para o `index.html`. Sem ele, abrir `/shop` ou `/agendar/horario` direto dá 404. O catálogo do Argila tem um igual.
-- [ ] `.github/workflows/deploy.yml` do [padrão de pipeline](https://github.com/BrunoMonfardini/Argila/blob/main/docs/padrao-de-pipeline.md#6-a-esteira-de-cd): merge na `main` publica em staging, e a promoção para produção é manual.
 - [ ] README: link do app publicado.
 
-**Pronto quando:** cada PR ganha uma URL de preview, e cada merge na `main` atualiza o staging sozinho.
+**Pronto quando:** cada merge na `main` atualiza o staging sozinho, e a produção sai com um clique e a sua aprovação.
 
 ---
 
