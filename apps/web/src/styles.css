@@ -59,12 +59,3 @@
   color: var(--arg-color-text-muted);
   margin: 0;
 }
-
-/*
- * Contorno de um bug do Argila 0.7.0: o host do arg-date-toggle tem pointer-events: none
- * e o diálogo do calendário, dentro dele, herda isso. Sem esta linha, clicar num dia não
- * faz nada. Sai daqui quando o Argila corrigir o componente.
- */
-.arg-date-toggle__dialog {
-  pointer-events: auto;
-}
