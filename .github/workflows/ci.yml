@@ -83,6 +83,18 @@ jobs:
           retention-days: 90
       - run: pnpm dup:check
       - run: pnpm build
+      # Ponta a ponta no navegador: pega o que o jsdom não pega (como o clique no calendário)
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm e2e
+      - name: Relatório dos testes de ponta a ponta
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: e2e
+          path: |
+            reports/e2e
+            test-results
+          retention-days: 14
 
   pr-checks:
     name: pr-checks
