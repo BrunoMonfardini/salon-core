@@ -2,7 +2,7 @@
 import presets from 'jest-preset-angular/presets/index.js';
 
 /**
- * Testes unitários do repositório: um project por app em apps/*.
+ * Testes unitários do repositório: um project por app em apps/* e os scripts.
  * Tudo roda como ESM (o Angular é publicado em ESM), por isso o Jest roda com
  * --experimental-vm-modules e cada spec importa `jest` de '@jest/globals'.
  */
@@ -22,10 +22,29 @@ function angular(app) {
 
 /** @type {import('jest').Config} */
 export default {
-  projects: [angular('web')],
+  projects: [
+    angular('web'),
+    {
+      displayName: 'scripts',
+      testEnvironment: 'node',
+      roots: ['<rootDir>/scripts'],
+      extensionsToTreatAsEsm: ['.ts'],
+      transform: {
+        '^.+\\.ts$': [
+          'ts-jest',
+          { useESM: true, tsconfig: '<rootDir>/scripts/tsconfig.jest.json' },
+        ],
+      },
+    },
+  ],
   collectCoverage: true,
   coverageProvider: 'v8',
-  collectCoverageFrom: ['apps/*/src/**/*.ts', '!**/*.spec.ts', '!**/main.ts'],
+  collectCoverageFrom: [
+    'apps/*/src/**/*.ts',
+    'scripts/lib/**/*.ts',
+    '!**/*.spec.ts',
+    '!**/main.ts',
+  ],
   coverageReporters: ['text-summary', 'html', 'json-summary', 'lcov'],
   coverageThreshold: {
     global: { lines: 80, branches: 80, functions: 80, statements: 80 },

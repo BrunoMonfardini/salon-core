@@ -29,6 +29,11 @@ module.exports = defineConfig([
     },
   },
   {
+    // Scripts de linha de comando escrevem no terminal: o console é a saída deles
+    files: ['scripts/**/*.ts'],
+    rules: { 'no-console': 'off' },
+  },
+  {
     files: ['**/*.spec.ts'],
     ...jest.configs['flat/recommended'],
     rules: {
