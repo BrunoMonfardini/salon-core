@@ -38,6 +38,10 @@ Instale dependências só com `pnpm install`: o `npm install` ignora o `pnpm-loc
 | `docs`     | Plano e documentação do projeto         |
 | `.github`  | Esteira de CI e modelos de PR e issue   |
 
+## Grafo de conhecimento
+
+O mapa do código (arquivos, ligações, camadas e um tour guiado) é gerado pelo plugin Understand Anything do Claude Code e fica em `.ua/`. Como instalar, ver no navegador e atualizar: [docs/grafo-de-conhecimento.md](docs/grafo-de-conhecimento.md).
+
 ## Fluxo de trabalho
 
 Branches curtas a partir da `main` (`feat/`, `fix/`, `chore/`, `docs/`, `refactor/`), commits em [Conventional Commits](https://www.conventionalcommits.org/pt-br/) com o assunto em minúscula, um commit por feature e PR com rebase merge. Os hooks do husky bloqueiam commit e push direto na `main`.
