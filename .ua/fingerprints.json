@@ -1,0 +1,3519 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "5b63d190ecb03e04c02a4f03d2ec333c22b5fb97",
+  "generatedAt": "2026-10-24T17:44:25.447Z",
+  "files": {
+    ".claude/settings.json": {
+      "filePath": ".claude/settings.json",
+      "contentHash": "e7e3abc0f64487aac81245e6a8ac311dacac2b0ed37a2daab32984aff49d8f84",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    ".gitattributes": {
+      "filePath": ".gitattributes",
+      "contentHash": "cc9ffddb02ccbcdb936fa7811a4a0545a02e68f55dfb6823871b0ba5092c6319",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".github/CODEOWNERS": {
+      "filePath": ".github/CODEOWNERS",
+      "contentHash": "688dafe53806a2f26fb1bba39c3ac55e04c9a3e68833883d258a6319c9daa6cb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    ".github/ISSUE_TEMPLATE/bug.md": {
+      "filePath": ".github/ISSUE_TEMPLATE/bug.md",
+      "contentHash": "b6f032e8153b6d08e2fb1a5ccffaed8c50b28e456a8555fd46f01b1ad5884a35",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    ".github/ISSUE_TEMPLATE/config.yml": {
+      "filePath": ".github/ISSUE_TEMPLATE/config.yml",
+      "contentHash": "1f103c6a9dd07cd13a9a6f17ace6b813f47747eb9cb7e00488cb2073caaf91bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".github/ISSUE_TEMPLATE/feature.md": {
+      "filePath": ".github/ISSUE_TEMPLATE/feature.md",
+      "contentHash": "80b4fdef4e48b47058b8672f7cf808ed71de7821354abf144c027a94cc0a0a88",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    ".github/dependabot.yml": {
+      "filePath": ".github/dependabot.yml",
+      "contentHash": "c57991fdbd49d96842dbf4e1ef3db88631e6535340df3dd44f8eb7b5782f02cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    ".github/pull_request_template.md": {
+      "filePath": ".github/pull_request_template.md",
+      "contentHash": "006afaa001a3e7850e607f89033fdeb48eb69502ddca1d706142ecb07ad9bf20",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    ".github/rulesets/main.json": {
+      "filePath": ".github/rulesets/main.json",
+      "contentHash": "3f36c16d94176109a91d2d5cadc72b0f0d8ae810fb00be00a74de952c25d22dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/ci.yml": {
+      "filePath": ".github/workflows/ci.yml",
+      "contentHash": "46181fb3515fbc8455a6fa585a1ad6010c10e0b3747afd1aefcd91d2bf6a8583",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 133,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/deploy.yml": {
+      "filePath": ".github/workflows/deploy.yml",
+      "contentHash": "eca01cbdf5d0ba88f67623abe4aa5f9b352721e762c7f95abdd82cd8e0393427",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/secret-scan.yml": {
+      "filePath": ".github/workflows/secret-scan.yml",
+      "contentHash": "3d063c3429826fdbadcc4bf16f20bb5384488d3e75f77b1c836dec1005dbef4a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    ".husky/commit-msg": {
+      "filePath": ".husky/commit-msg",
+      "contentHash": "8b0aaa888121980f99ee4aa2e2b4f72a7967a065eccbf82d0d258954e5ebd4b2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".husky/pre-commit": {
+      "filePath": ".husky/pre-commit",
+      "contentHash": "82e61eeb7991e255ad22f45955e5ff92b317514ca9eeb02931da97929e92bb85",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    ".husky/pre-push": {
+      "filePath": ".husky/pre-push",
+      "contentHash": "19aa1a7c0d8700da4e469153c10c44ca612a2802aab5756aca9b621dd87e20bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".jscpd.json": {
+      "filePath": ".jscpd.json",
+      "contentHash": "909b101301c21782b7b95a51f0f0da7430f19946dd3e322aae051c7aece0daae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    ".npmrc": {
+      "filePath": ".npmrc",
+      "contentHash": "598af50f1245e77f994fad677056e307fcc4076b7df3a0b02de985fc61aff1ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".nvmrc": {
+      "filePath": ".nvmrc",
+      "contentHash": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".prettierignore": {
+      "filePath": ".prettierignore",
+      "contentHash": "6d8e35233f7ffc178d8c6e107af726f5a862eb6d3df31d0fc986ccdd9e591cf6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "643bc4ddaf66ca4c6fde12456ffb080b732cbe2ae2b1d0c578688cc4b5db8770",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": false
+    },
+    "angular.json": {
+      "filePath": "angular.json",
+      "contentHash": "19b7604cb8840b52adc4e6d2b99512b183b8319a16ce62200afd2239fb95a5e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/public/vercel.json": {
+      "filePath": "apps/web/public/vercel.json",
+      "contentHash": "6d084311cb9a09642602875313e30e04e3b567b14bed7d55eb28d963c170acc1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/app.config.ts": {
+      "filePath": "apps/web/src/app/app.config.ts",
+      "contentHash": "cfac10c323b38ccc2d071be594d7f03bd3262e8184769006193301b99782bf38",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ApplicationConfig",
+            "provideBrowserGlobalErrorListeners"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "provideRouter"
+          ]
+        },
+        {
+          "source": "./app.routes",
+          "specifiers": [
+            "routes"
+          ]
+        },
+        {
+          "source": "./core/data/mock/mock-repos",
+          "specifiers": [
+            "provideMockRepos"
+          ]
+        },
+        {
+          "source": "./core/ui/argila",
+          "specifiers": [
+            "provideAparencia"
+          ]
+        }
+      ],
+      "exports": [
+        "appConfig"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/app.routes.ts": {
+      "filePath": "apps/web/src/app/app.routes.ts",
+      "contentHash": "b6697507548d820717c7594ab3f361025987108fe66c8a6eda56f72d48da95bd",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Routes"
+          ]
+        },
+        {
+          "source": "./core/config/salon.config",
+          "specifiers": [
+            "SALON"
+          ]
+        }
+      ],
+      "exports": [
+        "routes"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/app.spec.ts": {
+      "filePath": "apps/web/src/app/app.spec.ts",
+      "contentHash": "64adb4d19e0c9498c397821efd858e976ec8ef7b6a60cf3415c1f11f6d20cabb",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "./app",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "./app.config",
+          "specifiers": [
+            "appConfig"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/app.ts": {
+      "filePath": "apps/web/src/app/app.ts",
+      "contentHash": "e402b87b58478596226aff820494b43be315a445fa56f15f4b13e43b315e80ef",
+      "functions": [],
+      "classes": [
+        {
+          "name": "App",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "RouterOutlet"
+          ]
+        }
+      ],
+      "exports": [
+        "App"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/disponibilidade.spec.ts": {
+      "filePath": "apps/web/src/app/core/agenda/disponibilidade.spec.ts",
+      "contentHash": "27d9013ed21cf3fbd9d537c73fb91ad17b126af70101fa3497063c7e26b589c9",
+      "functions": [
+        {
+          "name": "livres",
+          "params": [
+            "slots"
+          ],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../models",
+          "specifiers": [
+            "Expediente"
+          ]
+        },
+        {
+          "source": "./disponibilidade",
+          "specifiers": [
+            "AGORA",
+            "agoraDe",
+            "diasComVaga",
+            "horariosDoDia",
+            "periodoDe",
+            "proximoHorario"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/disponibilidade.ts": {
+      "filePath": "apps/web/src/app/core/agenda/disponibilidade.ts",
+      "contentHash": "7b4481a092f06501846dbe11d473d75815576df87e69dfd6f6cc6bf21c2dfbd5",
+      "functions": [
+        {
+          "name": "agoraDe",
+          "params": [
+            "data"
+          ],
+          "returnType": "Agora",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "horariosDoDia",
+          "params": [
+            "expediente",
+            "data",
+            "duracaoMin",
+            "ocupados",
+            "agora"
+          ],
+          "returnType": "ArgTimeSlot[]",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "periodoDe",
+          "params": [
+            "data",
+            "inicio",
+            "duracaoMin"
+          ],
+          "returnType": "Periodo",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "diasDaJanela",
+          "params": [
+            "agora",
+            "dias"
+          ],
+          "returnType": "string[]",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "proximoHorario",
+          "params": [
+            "expediente",
+            "duracaoMin",
+            "ocupados",
+            "agora",
+            "dias"
+          ],
+          "returnType": "ProximoHorario | null",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "diasComVaga",
+          "params": [
+            "expediente",
+            "duracaoMin",
+            "ocupados",
+            "agora",
+            "dias"
+          ],
+          "returnType": "Set<string>",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "InjectionToken"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgTimeSlot",
+            "addDays",
+            "todayIso",
+            "toMinutes",
+            "toTime",
+            "weekday"
+          ]
+        },
+        {
+          "source": "../models",
+          "specifiers": [
+            "Expediente",
+            "Periodo"
+          ]
+        },
+        {
+          "source": "./periodo",
+          "specifiers": [
+            "sobrepoe"
+          ]
+        }
+      ],
+      "exports": [
+        "PASSO_MIN",
+        "DIAS_DE_AGENDA",
+        "agoraDe",
+        "AGORA",
+        "horariosDoDia",
+        "periodoDe",
+        "diasDaJanela",
+        "proximoHorario",
+        "diasComVaga"
+      ],
+      "totalLines": 100,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/ics.spec.ts": {
+      "filePath": "apps/web/src/app/core/agenda/ics.spec.ts",
+      "contentHash": "b6648da934b56c8ad3dd626236febf3802887ffa7731e2ed20a79a146d9f6204",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "./ics",
+          "specifiers": [
+            "EventoIcs",
+            "arquivoIcs",
+            "linkIcs"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/ics.ts": {
+      "filePath": "apps/web/src/app/core/agenda/ics.ts",
+      "contentHash": "db69e2d05f99cbd825b1bc0bd21d0f8656ff5d27cd97b044aa116876c1b83dd9",
+      "functions": [
+        {
+          "name": "dataHoraIcs",
+          "params": [
+            "dataHora"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "texto",
+          "params": [
+            "valor"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "arquivoIcs",
+          "params": [
+            "{ id, titulo, local, inicio, fim }"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "linkIcs",
+          "params": [
+            "evento"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../models",
+          "specifiers": [
+            "Periodo"
+          ]
+        }
+      ],
+      "exports": [
+        "FUSO",
+        "arquivoIcs",
+        "linkIcs"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/periodo.spec.ts": {
+      "filePath": "apps/web/src/app/core/agenda/periodo.spec.ts",
+      "contentHash": "1053d4853eaf67fb76801a81d8273cbbb947d70a5eb4df4b65b5bf80ad89e76f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "./periodo",
+          "specifiers": [
+            "sobrepoe"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/agenda/periodo.ts": {
+      "filePath": "apps/web/src/app/core/agenda/periodo.ts",
+      "contentHash": "6f7d638fb5b6c2ed9aaeabb767300e91c89052ad02bddda72fff4c101b47aec2",
+      "functions": [
+        {
+          "name": "sobrepoe",
+          "params": [
+            "a",
+            "b"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../models",
+          "specifiers": [
+            "Periodo"
+          ]
+        }
+      ],
+      "exports": [
+        "sobrepoe"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/booking/booking.store.spec.ts": {
+      "filePath": "apps/web/src/app/core/booking/booking.store.spec.ts",
+      "contentHash": "4d09e989ffad330e8a903fd8ec958869a567e67ad06faa30fda00674e18a7226",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../data/mock/dados",
+          "specifiers": [
+            "PROFISSIONAIS",
+            "SERVICOS"
+          ]
+        },
+        {
+          "source": "./booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 80,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/booking/booking.store.ts": {
+      "filePath": "apps/web/src/app/core/booking/booking.store.ts",
+      "contentHash": "544ee5455aabad88d1a1046aacf0570e35c3538547fd8127f4d67ac990e0b3e6",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BookingStore",
+          "methods": [
+            "escolherProfissional",
+            "escolherServico",
+            "escolherData",
+            "escolherHorario",
+            "limparHorario",
+            "limpar"
+          ],
+          "properties": [
+            "_profissional",
+            "_servico",
+            "_data",
+            "_horario",
+            "profissional",
+            "servico",
+            "data",
+            "horario",
+            "passosConcluidos"
+          ],
+          "exported": true,
+          "lineCount": 55
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "Injectable",
+            "computed",
+            "signal"
+          ]
+        },
+        {
+          "source": "../models",
+          "specifiers": [
+            "Profissional",
+            "Servico"
+          ]
+        }
+      ],
+      "exports": [
+        "BookingStore"
+      ],
+      "totalLines": 64,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/config/salon.config.spec.ts": {
+      "filePath": "apps/web/src/app/core/config/salon.config.spec.ts",
+      "contentHash": "2bfd011f8123fc660bead70570517af7d084d7bdfe1313bfd50df4d0909ed8ee",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "./salon.config",
+          "specifiers": [
+            "SALON",
+            "SALON_CONFIG",
+            "enderecoCompleto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/config/salon.config.ts": {
+      "filePath": "apps/web/src/app/core/config/salon.config.ts",
+      "contentHash": "3a2fd95d9961b0efbf9846e034dce72cf7e42bda015faa08bea814d9b1648f7e",
+      "functions": [
+        {
+          "name": "enderecoCompleto",
+          "params": [
+            "{ logradouro, numero, bairro, cidade, uf }"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "InjectionToken"
+          ]
+        }
+      ],
+      "exports": [
+        "SALON",
+        "SALON_CONFIG",
+        "enderecoCompleto"
+      ],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/data/mock/dados.ts": {
+      "filePath": "apps/web/src/app/core/data/mock/dados.ts",
+      "contentHash": "7a76b593e7160177688a2c521d18bc7ee89b0c01067755b91cf73b1b609cd5bc",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../../models",
+          "specifiers": [
+            "Expediente",
+            "Faixa",
+            "Produto",
+            "Profissional",
+            "Servico"
+          ]
+        }
+      ],
+      "exports": [
+        "SERVICOS",
+        "PROFISSIONAIS",
+        "PRODUTOS"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/data/mock/mock-repos.spec.ts": {
+      "filePath": "apps/web/src/app/core/data/mock/mock-repos.spec.ts",
+      "contentHash": "411426ad8704cc00c454f52c800d8b35442ada3ae9b14b556dff5dfbfcb03526",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../../models",
+          "specifiers": [
+            "NovoAgendamento"
+          ]
+        },
+        {
+          "source": "../repos",
+          "specifiers": [
+            "AgendaRepo",
+            "HorarioIndisponivelError",
+            "ProdutosRepo",
+            "ProfissionaisRepo",
+            "ServicosRepo"
+          ]
+        },
+        {
+          "source": "./dados",
+          "specifiers": [
+            "PRODUTOS",
+            "PROFISSIONAIS",
+            "SERVICOS"
+          ]
+        },
+        {
+          "source": "./mock-repos",
+          "specifiers": [
+            "provideMockRepos"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/data/mock/mock-repos.ts": {
+      "filePath": "apps/web/src/app/core/data/mock/mock-repos.ts",
+      "contentHash": "61f8bff5d6538dd0f9061f935530875c21b25f79067083d96f186199d708f393",
+      "functions": [
+        {
+          "name": "provideMockRepos",
+          "params": [],
+          "returnType": "Provider[]",
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "MockProfissionaisRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "MockServicosRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "MockProdutosRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "MockAgendaRepo",
+          "methods": [
+            "ocupados",
+            "criar"
+          ],
+          "properties": [
+            "agendamentos",
+            "proximoId"
+          ],
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "Injectable",
+            "Provider"
+          ]
+        },
+        {
+          "source": "../../agenda/periodo",
+          "specifiers": [
+            "sobrepoe"
+          ]
+        },
+        {
+          "source": "../../models",
+          "specifiers": [
+            "Agendamento",
+            "NovoAgendamento",
+            "Periodo"
+          ]
+        },
+        {
+          "source": "../repos",
+          "specifiers": [
+            "AgendaRepo",
+            "HorarioIndisponivelError",
+            "ProdutosRepo",
+            "ProfissionaisRepo",
+            "ServicosRepo"
+          ]
+        },
+        {
+          "source": "./dados",
+          "specifiers": [
+            "PRODUTOS",
+            "PROFISSIONAIS",
+            "SERVICOS"
+          ]
+        }
+      ],
+      "exports": [
+        "MockProfissionaisRepo",
+        "MockServicosRepo",
+        "MockProdutosRepo",
+        "MockAgendaRepo",
+        "provideMockRepos"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/data/repos.ts": {
+      "filePath": "apps/web/src/app/core/data/repos.ts",
+      "contentHash": "4ccbb183359c457312cee8f5264130d809a4f91ba0dd31ea834c6fdf6140c772",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProfissionaisRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "ServicosRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "AgendaRepo",
+          "methods": [
+            "ocupados",
+            "criar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "ProdutosRepo",
+          "methods": [
+            "listar"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "HorarioIndisponivelError",
+          "methods": [
+            "constructor"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "../models",
+          "specifiers": [
+            "Agendamento",
+            "NovoAgendamento",
+            "Periodo",
+            "Produto",
+            "Profissional",
+            "Servico"
+          ]
+        }
+      ],
+      "exports": [
+        "ProfissionaisRepo",
+        "ServicosRepo",
+        "AgendaRepo",
+        "ProdutosRepo",
+        "HorarioIndisponivelError"
+      ],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/formatos.spec.ts": {
+      "filePath": "apps/web/src/app/core/formatos.spec.ts",
+      "contentHash": "bc3c3013380ea82f23b0c081e723f0533b12d3455e2584fa71e97c6f6abbd631",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "./data/mock/dados",
+          "specifiers": [
+            "SERVICOS"
+          ]
+        },
+        {
+          "source": "./formatos",
+          "specifiers": [
+            "rotuloDoServico"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/formatos.ts": {
+      "filePath": "apps/web/src/app/core/formatos.ts",
+      "contentHash": "73738b4145f6d6a7c0b59bf818b9481ff7d15b948e097817643040f7308e5ece",
+      "functions": [
+        {
+          "name": "rotuloDoServico",
+          "params": [
+            "{ nome, duracaoMin, precoCentavos }"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "formatCents"
+          ]
+        },
+        {
+          "source": "./models",
+          "specifiers": [
+            "Servico"
+          ]
+        }
+      ],
+      "exports": [
+        "rotuloDoServico"
+      ],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/models.ts": {
+      "filePath": "apps/web/src/app/core/models.ts",
+      "contentHash": "8064727b05e7bec2b34168bc2214e690a4381f6ff3cf7a3615fdc650ab5d7b8c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/core/ui/argila.ts": {
+      "filePath": "apps/web/src/app/core/ui/argila.ts",
+      "contentHash": "28e7e7d7bd1fbd089cce55176d6f753aaa8c1fb2f0943a40b0bf123fa062c67a",
+      "functions": [
+        {
+          "name": "provideAparencia",
+          "params": [],
+          "returnType": "EnvironmentProviders[]",
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "EnvironmentProviders"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "argIconCalendar",
+            "argIconCar",
+            "argIconCheck",
+            "argIconClock",
+            "argIconExternalLink",
+            "argIconMapPin",
+            "argIconScissors",
+            "argIconSparkles",
+            "provideArgIcons",
+            "provideArgila"
+          ]
+        }
+      ],
+      "exports": [
+        "ICONES",
+        "provideAparencia"
+      ],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/booking-shell.ts": {
+      "filePath": "apps/web/src/app/features/booking/booking-shell.ts",
+      "contentHash": "f0759899961685d405e571632cca6861f3ce105a424f8dff5a1cd31dda9a4113",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BookingShell",
+          "methods": [
+            "irPara"
+          ],
+          "properties": [
+            "router",
+            "url",
+            "rotulos",
+            "atual"
+          ],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "computed",
+            "inject"
+          ]
+        },
+        {
+          "source": "@angular/core/rxjs-interop",
+          "specifiers": [
+            "toSignal"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "NavigationEnd",
+            "Router",
+            "RouterLink",
+            "RouterOutlet"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgLink",
+            "ArgStepper"
+          ]
+        },
+        {
+          "source": "rxjs",
+          "specifiers": [
+            "filter",
+            "map"
+          ]
+        },
+        {
+          "source": "./passos",
+          "specifiers": [
+            "PASSOS",
+            "passoDaUrl",
+            "urlDoPasso"
+          ]
+        }
+      ],
+      "exports": [
+        "BookingShell"
+      ],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/booking.routes.ts": {
+      "filePath": "apps/web/src/app/features/booking/booking.routes.ts",
+      "contentHash": "21d8ae432004c452741295dbdec719fd39148a0debf90821d932bddf311292a2",
+      "functions": [
+        {
+          "name": "titulo",
+          "params": [
+            "passo"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Routes"
+          ]
+        },
+        {
+          "source": "../../core/config/salon.config",
+          "specifiers": [
+            "SALON"
+          ]
+        },
+        {
+          "source": "./booking-shell",
+          "specifiers": [
+            "BookingShell"
+          ]
+        },
+        {
+          "source": "./passo.guard",
+          "specifiers": [
+            "passoGuard"
+          ]
+        },
+        {
+          "source": "./passos",
+          "specifiers": [
+            "PASSOS"
+          ]
+        }
+      ],
+      "exports": [
+        "BOOKING_ROUTES"
+      ],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/booking.spec.ts": {
+      "filePath": "apps/web/src/app/features/booking/booking.spec.ts",
+      "contentHash": "0f0a80885bbc1e6b7046c0fe2729d663ef56f06f325c99b99e4d4062641bbe87",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "@angular/platform-browser",
+          "specifiers": [
+            "By"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "ActivatedRouteSnapshot",
+            "Router",
+            "RouterStateSnapshot",
+            "provideRouter"
+          ]
+        },
+        {
+          "source": "@angular/router/testing",
+          "specifiers": [
+            "RouterTestingHarness"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgStepper",
+            "provideArgIcons"
+          ]
+        },
+        {
+          "source": "../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../core/data/mock/dados",
+          "specifiers": [
+            "PROFISSIONAIS"
+          ]
+        },
+        {
+          "source": "../../core/data/mock/mock-repos",
+          "specifiers": [
+            "provideMockRepos"
+          ]
+        },
+        {
+          "source": "../../core/ui/argila",
+          "specifiers": [
+            "ICONES"
+          ]
+        },
+        {
+          "source": "./booking.routes",
+          "specifiers": [
+            "BOOKING_ROUTES"
+          ]
+        },
+        {
+          "source": "./passo.guard",
+          "specifiers": [
+            "passoGuard"
+          ]
+        },
+        {
+          "source": "./passos",
+          "specifiers": [
+            "PASSOS",
+            "passoDaUrl",
+            "urlDoPasso"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/confirmacao/confirmacao.html": {
+      "filePath": "apps/web/src/app/features/booking/confirmacao/confirmacao.html",
+      "contentHash": "0dd2df4e3ddde0a8752043d545bfa63afbc295cde74a75adcb0daf57558aa7dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/booking/confirmacao/confirmacao.spec.ts": {
+      "filePath": "apps/web/src/app/features/booking/confirmacao/confirmacao.spec.ts",
+      "contentHash": "2f6dced50432d84e168331cfda79edc8d0c00c61f0006495024b7fc083bb7179",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it",
+            "jest"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "ComponentFixture",
+            "TestBed"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgToast"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/data/mock/dados",
+          "specifiers": [
+            "PROFISSIONAIS",
+            "SERVICOS"
+          ]
+        },
+        {
+          "source": "../../../core/data/repos",
+          "specifiers": [
+            "AgendaRepo",
+            "HorarioIndisponivelError"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "NovoAgendamento"
+          ]
+        },
+        {
+          "source": "../../../../testing/providers",
+          "specifiers": [
+            "provideTela"
+          ]
+        },
+        {
+          "source": "./confirmacao",
+          "specifiers": [
+            "Confirmacao"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/confirmacao/confirmacao.ts": {
+      "filePath": "apps/web/src/app/features/booking/confirmacao/confirmacao.ts",
+      "contentHash": "ec95c02d875e8dcec3c70b771c992a65d9a5d61de05d4457ccb02e35da576e4b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Confirmacao",
+          "methods": [
+            "erro",
+            "confirmar",
+            "escolherOutroHorario"
+          ],
+          "properties": [
+            "store",
+            "agenda",
+            "router",
+            "toast",
+            "salon",
+            "rota",
+            "form",
+            "enviando",
+            "conflito",
+            "confirmado",
+            "escolhas"
+          ],
+          "exported": true,
+          "lineCount": 77
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "computed",
+            "inject",
+            "signal"
+          ]
+        },
+        {
+          "source": "@angular/forms",
+          "specifiers": [
+            "FormControl",
+            "FormGroup",
+            "ReactiveFormsModule",
+            "Validators"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router",
+            "RouterLink"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_FIELD",
+            "ArgAlert",
+            "ArgButton",
+            "ArgIcon",
+            "ArgInput",
+            "ArgMaskedInput",
+            "ArgToast",
+            "toMinutes"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "periodoDe"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/ics",
+          "specifiers": [
+            "linkIcs"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/config/salon.config",
+          "specifiers": [
+            "SALON_CONFIG",
+            "enderecoCompleto"
+          ]
+        },
+        {
+          "source": "../../../core/data/repos",
+          "specifiers": [
+            "AgendaRepo",
+            "HorarioIndisponivelError"
+          ]
+        },
+        {
+          "source": "../../../shared/links/como-chegar",
+          "specifiers": [
+            "comoChegarLinks"
+          ]
+        },
+        {
+          "source": "../passos",
+          "specifiers": [
+            "urlDoPasso"
+          ]
+        },
+        {
+          "source": "./resumo",
+          "specifiers": [
+            "Escolhas",
+            "Resumo"
+          ]
+        }
+      ],
+      "exports": [
+        "Confirmacao"
+      ],
+      "totalLines": 120,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/confirmacao/resumo.ts": {
+      "filePath": "apps/web/src/app/features/booking/confirmacao/resumo.ts",
+      "contentHash": "4591ac32c90aa00a58c23e73cc0db950b9eba2c59cd90a508b8de13c3a08858c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Resumo",
+          "methods": [],
+          "properties": [
+            "escolhas",
+            "endereco",
+            "itens"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "computed",
+            "inject",
+            "input"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_LIST",
+            "dayLabel"
+          ]
+        },
+        {
+          "source": "../../../core/config/salon.config",
+          "specifiers": [
+            "SALON_CONFIG",
+            "enderecoCompleto"
+          ]
+        },
+        {
+          "source": "../../../core/formatos",
+          "specifiers": [
+            "rotuloDoServico"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "Profissional",
+            "Servico"
+          ]
+        }
+      ],
+      "exports": [
+        "Resumo"
+      ],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/data-horario/data-horario.html": {
+      "filePath": "apps/web/src/app/features/booking/data-horario/data-horario.html",
+      "contentHash": "4770034aa21a68a0c0459c456809676abaa03b53c60c4d4c43929cb72fed65bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/booking/data-horario/data-horario.spec.ts": {
+      "filePath": "apps/web/src/app/features/booking/data-horario/data-horario.spec.ts",
+      "contentHash": "b0e92940e27fb55c032633fc47ac737bc8733ff6050e466904748b7298729440",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it",
+            "jest"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "ComponentFixture",
+            "TestBed"
+          ]
+        },
+        {
+          "source": "@angular/platform-browser",
+          "specifiers": [
+            "By"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgDateInput"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "AGORA"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/data/mock/dados",
+          "specifiers": [
+            "PROFISSIONAIS"
+          ]
+        },
+        {
+          "source": "../../../../testing/providers",
+          "specifiers": [
+            "provideTela"
+          ]
+        },
+        {
+          "source": "./data-horario",
+          "specifiers": [
+            "DataHorario"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/data-horario/data-horario.ts": {
+      "filePath": "apps/web/src/app/features/booking/data-horario/data-horario.ts",
+      "contentHash": "b8b3463dd2270f762af7c04b202d773fc4b2b63a9c8ac7cece0c12e03bea97ca",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DataHorario",
+          "methods": [
+            "escolherServico",
+            "escolherData",
+            "escolherHorario",
+            "continuar"
+          ],
+          "properties": [
+            "servicosRepo",
+            "agendaRepo",
+            "router",
+            "agora",
+            "store",
+            "preco",
+            "janela",
+            "hoje",
+            "ultimoDia",
+            "expediente",
+            "servicos",
+            "servicosDoProfissional",
+            "ocupados",
+            "diasLivres",
+            "diaBloqueado",
+            "horarios",
+            "podeContinuar"
+          ],
+          "exported": true,
+          "lineCount": 73
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "computed",
+            "inject",
+            "resource"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_FIELD",
+            "ArgButton",
+            "ArgDateInput",
+            "ArgIcon",
+            "ArgTimeSlots",
+            "formatCents"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "AGORA",
+            "DIAS_DE_AGENDA",
+            "diasComVaga",
+            "diasDaJanela",
+            "horariosDoDia"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/data/repos",
+          "specifiers": [
+            "AgendaRepo",
+            "ServicosRepo"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "Servico"
+          ]
+        },
+        {
+          "source": "../../../shared/ui/opcao-card/opcao-card",
+          "specifiers": [
+            "OpcaoCard"
+          ]
+        },
+        {
+          "source": "../passos",
+          "specifiers": [
+            "urlDoPasso"
+          ]
+        }
+      ],
+      "exports": [
+        "DataHorario"
+      ],
+      "totalLines": 103,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/passo.guard.ts": {
+      "filePath": "apps/web/src/app/features/booking/passo.guard.ts",
+      "contentHash": "6ca218b4067556623bb8541fbbfcb46157ff4b874d4392722291c2ddc9a88a7b",
+      "functions": [
+        {
+          "name": "passoGuard",
+          "params": [
+            "passo"
+          ],
+          "returnType": "CanActivateFn",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "inject"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "CanActivateFn",
+            "Router"
+          ]
+        },
+        {
+          "source": "../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "./passos",
+          "specifiers": [
+            "urlDoPasso"
+          ]
+        }
+      ],
+      "exports": [
+        "passoGuard"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/passos.ts": {
+      "filePath": "apps/web/src/app/features/booking/passos.ts",
+      "contentHash": "43ed509eda00b2955f22a7762eaa6d08fca18213c8ea1624b03627baed45ef53",
+      "functions": [
+        {
+          "name": "urlDoPasso",
+          "params": [
+            "indice"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "passoDaUrl",
+          "params": [
+            "url"
+          ],
+          "returnType": "number",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "PASSOS",
+        "urlDoPasso",
+        "passoDaUrl"
+      ],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/profissional/escolha-profissional.html": {
+      "filePath": "apps/web/src/app/features/booking/profissional/escolha-profissional.html",
+      "contentHash": "dc35d8aa64f49b4fb0b4816a59d8e56a4b01ea27ed5924cc1c8fa353de8e5600",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/booking/profissional/escolha-profissional.spec.ts": {
+      "filePath": "apps/web/src/app/features/booking/profissional/escolha-profissional.spec.ts",
+      "contentHash": "3e4a9c35298919dd3089c4e163944c24306b134b8b8f84310407a5e1341c02fd",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [],
+          "returnType": "Promise<HTMLElement>",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "cards",
+          "params": [
+            "el"
+          ],
+          "exported": false,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it",
+            "jest"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "AGORA"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/data/mock/dados",
+          "specifiers": [
+            "PROFISSIONAIS"
+          ]
+        },
+        {
+          "source": "../../../core/data/repos",
+          "specifiers": [
+            "ProfissionaisRepo"
+          ]
+        },
+        {
+          "source": "../../../../testing/providers",
+          "specifiers": [
+            "provideTela"
+          ]
+        },
+        {
+          "source": "./escolha-profissional",
+          "specifiers": [
+            "EscolhaProfissional"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/profissional/escolha-profissional.ts": {
+      "filePath": "apps/web/src/app/features/booking/profissional/escolha-profissional.ts",
+      "contentHash": "2263386679d8357908c1f98af7e75b848034c6314eaee3ffab7779dd54cac130",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EscolhaProfissional",
+          "methods": [
+            "escolher"
+          ],
+          "properties": [
+            "profissionaisRepo",
+            "servicosRepo",
+            "agendaRepo",
+            "agora",
+            "store",
+            "router",
+            "escolhido",
+            "esqueletos",
+            "opcoes"
+          ],
+          "exported": true,
+          "lineCount": 40
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "inject",
+            "resource"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "Router"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgAvatar",
+            "ArgBadge",
+            "ArgSkeleton",
+            "addDays"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "AGORA",
+            "DIAS_DE_AGENDA",
+            "proximoHorario"
+          ]
+        },
+        {
+          "source": "../../../core/booking/booking.store",
+          "specifiers": [
+            "BookingStore"
+          ]
+        },
+        {
+          "source": "../../../core/data/repos",
+          "specifiers": [
+            "AgendaRepo",
+            "ProfissionaisRepo",
+            "ServicosRepo"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "Profissional"
+          ]
+        },
+        {
+          "source": "../../../shared/ui/opcao-card/opcao-card",
+          "specifiers": [
+            "OpcaoCard"
+          ]
+        },
+        {
+          "source": "../passos",
+          "specifiers": [
+            "urlDoPasso"
+          ]
+        },
+        {
+          "source": "./status",
+          "specifiers": [
+            "statusDoProfissional"
+          ]
+        }
+      ],
+      "exports": [
+        "EscolhaProfissional"
+      ],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/profissional/status.spec.ts": {
+      "filePath": "apps/web/src/app/features/booking/profissional/status.spec.ts",
+      "contentHash": "77e0708f9d9e7bcb69ce40bcc176e7602eac3ded116687bccd149c3b1656b707",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "./status",
+          "specifiers": [
+            "statusDoProfissional"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/booking/profissional/status.ts": {
+      "filePath": "apps/web/src/app/features/booking/profissional/status.ts",
+      "contentHash": "a1809d1da13a692279466a701c1e0df19a0bafd16d60ed53d2b453e3948c85f1",
+      "functions": [
+        {
+          "name": "diaCurto",
+          "params": [
+            "data"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "statusDoProfissional",
+          "params": [
+            "proximo",
+            "hoje"
+          ],
+          "returnType": "StatusDoProfissional",
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "formatBr",
+            "weekday",
+            "weekdayNames"
+          ]
+        },
+        {
+          "source": "../../../core/agenda/disponibilidade",
+          "specifiers": [
+            "DIAS_DE_AGENDA",
+            "ProximoHorario"
+          ]
+        }
+      ],
+      "exports": [
+        "statusDoProfissional"
+      ],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/home/como-chegar/como-chegar.css": {
+      "filePath": "apps/web/src/app/features/home/como-chegar/como-chegar.css",
+      "contentHash": "c8970434ef4b054adeb193467458a053cfcc50c882a13b6d4ac9a49febc822f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/home/como-chegar/como-chegar.html": {
+      "filePath": "apps/web/src/app/features/home/como-chegar/como-chegar.html",
+      "contentHash": "24d3a8b7c214304644ac496da4da1a74a60fa5ba411ffcd61530a2a781916bed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/home/como-chegar/como-chegar.spec.ts": {
+      "filePath": "apps/web/src/app/features/home/como-chegar/como-chegar.spec.ts",
+      "contentHash": "f80f63eb94a670fc885b259b08a47436623f0a17ed17d173049db78a9431574b",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [],
+          "returnType": "HTMLElement",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../../../core/config/salon.config",
+          "specifiers": [
+            "SALON"
+          ]
+        },
+        {
+          "source": "../../../shared/links/como-chegar",
+          "specifiers": [
+            "comoChegarLinks"
+          ]
+        },
+        {
+          "source": "../../../../testing/providers",
+          "specifiers": [
+            "provideTela"
+          ]
+        },
+        {
+          "source": "./como-chegar",
+          "specifiers": [
+            "ComoChegar"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/home/como-chegar/como-chegar.ts": {
+      "filePath": "apps/web/src/app/features/home/como-chegar/como-chegar.ts",
+      "contentHash": "5bf50befd7fac3bb8f9ded6d3e1697a370552ab28590de9efbefa6761da2f588",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ComoChegar",
+          "methods": [],
+          "properties": [
+            "salon",
+            "links",
+            "endereco",
+            "mapa",
+            "acoes"
+          ],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "inject"
+          ]
+        },
+        {
+          "source": "@angular/platform-browser",
+          "specifiers": [
+            "DomSanitizer"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_CARD",
+            "ArgButton",
+            "ArgIcon",
+            "ArgIconName"
+          ]
+        },
+        {
+          "source": "../../../core/config/salon.config",
+          "specifiers": [
+            "SALON_CONFIG",
+            "enderecoCompleto"
+          ]
+        },
+        {
+          "source": "../../../shared/links/como-chegar",
+          "specifiers": [
+            "comoChegarLinks"
+          ]
+        }
+      ],
+      "exports": [
+        "ComoChegar"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/home/home.css": {
+      "filePath": "apps/web/src/app/features/home/home.css",
+      "contentHash": "b5f0cbe1056d8219bb6bf03fe92104212dd12ff608d33a7f177a6795eb8dfb8e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/home/home.html": {
+      "filePath": "apps/web/src/app/features/home/home.html",
+      "contentHash": "f8be779bfc4af0c80c2de12e4d310aa8724657ff631fc1c96a637227f8dbcec7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/home/home.spec.ts": {
+      "filePath": "apps/web/src/app/features/home/home.spec.ts",
+      "contentHash": "8a2a1a027bcd795538744a81afd608a44f27cf61bb078dc53e51fab02337ec05",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [],
+          "returnType": "Promise<HTMLElement>",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "beforeEach",
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../../core/config/salon.config",
+          "specifiers": [
+            "SALON"
+          ]
+        },
+        {
+          "source": "../../../testing/providers",
+          "specifiers": [
+            "provideTela"
+          ]
+        },
+        {
+          "source": "./home",
+          "specifiers": [
+            "Home"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/home/home.ts": {
+      "filePath": "apps/web/src/app/features/home/home.ts",
+      "contentHash": "c41badf50155eab72a266dbdd364a3d3f2b6477d90fcee4546bd90b78cecd482",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Home",
+          "methods": [],
+          "properties": [
+            "salon"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "inject"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "RouterLink"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_CARD",
+            "ArgButton",
+            "ArgIcon"
+          ]
+        },
+        {
+          "source": "../../core/config/salon.config",
+          "specifiers": [
+            "SALON_CONFIG"
+          ]
+        },
+        {
+          "source": "./como-chegar/como-chegar",
+          "specifiers": [
+            "ComoChegar"
+          ]
+        }
+      ],
+      "exports": [
+        "Home"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/shop/shop.html": {
+      "filePath": "apps/web/src/app/features/shop/shop.html",
+      "contentHash": "63a1836e05e8cf97a2288ef840b1eeaa10693ef8207231f7cfc34603463cf555",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/app/features/shop/shop.spec.ts": {
+      "filePath": "apps/web/src/app/features/shop/shop.spec.ts",
+      "contentHash": "b2664d4c564c64f5c00c3b015670111a3cd9c9b07beb9658d36ffe8e6fc48628",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [
+            "produtos"
+          ],
+          "returnType": "Promise<HTMLElement>",
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "provideRouter"
+          ]
+        },
+        {
+          "source": "../../core/data/mock/dados",
+          "specifiers": [
+            "PRODUTOS"
+          ]
+        },
+        {
+          "source": "../../core/data/repos",
+          "specifiers": [
+            "ProdutosRepo"
+          ]
+        },
+        {
+          "source": "../../core/models",
+          "specifiers": [
+            "Produto"
+          ]
+        },
+        {
+          "source": "./shop",
+          "specifiers": [
+            "Shop"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/features/shop/shop.ts": {
+      "filePath": "apps/web/src/app/features/shop/shop.ts",
+      "contentHash": "c5cb438ae5fcff26dbdf39ec5a79850ef314e2e67d0c25aa1deb736350fa45e9",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Shop",
+          "methods": [],
+          "properties": [
+            "produtosRepo",
+            "produtos",
+            "esqueletos"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "inject",
+            "resource"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "RouterLink"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ArgEmptyState",
+            "ArgLink",
+            "ArgSkeleton"
+          ]
+        },
+        {
+          "source": "../../core/data/repos",
+          "specifiers": [
+            "ProdutosRepo"
+          ]
+        },
+        {
+          "source": "../../shared/ui/produto-card/produto-card",
+          "specifiers": [
+            "ProdutoCard"
+          ]
+        }
+      ],
+      "exports": [
+        "Shop"
+      ],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/links/como-chegar.spec.ts": {
+      "filePath": "apps/web/src/app/shared/links/como-chegar.spec.ts",
+      "contentHash": "e421e0d8fa322cafbacf2555ead68ff2f206a60e028b2583f851ef1d185fceee",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "../../core/config/salon.config",
+          "specifiers": [
+            "SALON",
+            "SalonConfig"
+          ]
+        },
+        {
+          "source": "./como-chegar",
+          "specifiers": [
+            "comoChegarLinks"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/links/como-chegar.ts": {
+      "filePath": "apps/web/src/app/shared/links/como-chegar.ts",
+      "contentHash": "a14347071a0f41420c8935dd1df20d97880637535eed0133c35ff860b5aeadb5",
+      "functions": [
+        {
+          "name": "comoChegarLinks",
+          "params": [
+            "{ nome, endereco, coordenadas }"
+          ],
+          "returnType": "ComoChegarLinks",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../../core/config/salon.config",
+          "specifiers": [
+            "SalonConfig",
+            "enderecoCompleto"
+          ]
+        }
+      ],
+      "exports": [
+        "comoChegarLinks"
+      ],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/ui/opcao-card/opcao-card.spec.ts": {
+      "filePath": "apps/web/src/app/shared/ui/opcao-card/opcao-card.spec.ts",
+      "contentHash": "dfef861c681123964e4d8d3e27216055c6fde56a8b397760cd9f7e1bf4527bd0",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "Hospedeiro",
+          "methods": [],
+          "properties": [
+            "escolhida",
+            "desabilitada",
+            "nivel",
+            "escolheu"
+          ],
+          "exported": false,
+          "lineCount": 22
+        }
+      ],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it",
+            "jest"
+          ]
+        },
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "Component",
+            "signal"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "./opcao-card",
+          "specifiers": [
+            "OpcaoCard"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/ui/opcao-card/opcao-card.ts": {
+      "filePath": "apps/web/src/app/shared/ui/opcao-card/opcao-card.ts",
+      "contentHash": "5f70877fc8b69b14a55cfd42833bba8c31a0a2060f21179fa63fd29c4d906ce9",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OpcaoCard",
+          "methods": [],
+          "properties": [
+            "titulo",
+            "escolhida",
+            "desabilitada",
+            "nivel",
+            "escolher"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "booleanAttribute",
+            "input",
+            "output"
+          ]
+        },
+        {
+          "source": "@angular/common",
+          "specifiers": [
+            "NgTemplateOutlet"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_CARD",
+            "ArgBadge"
+          ]
+        }
+      ],
+      "exports": [
+        "OpcaoCard"
+      ],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/ui/produto-card/produto-card.spec.ts": {
+      "filePath": "apps/web/src/app/shared/ui/produto-card/produto-card.spec.ts",
+      "contentHash": "f1e1c33805639a4d72f10a622a5781b2a0870b0a01badfa871bcacfe899b1436",
+      "functions": [
+        {
+          "name": "renderizar",
+          "params": [
+            "produto"
+          ],
+          "returnType": "HTMLElement",
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@angular/core/testing",
+          "specifiers": [
+            "TestBed"
+          ]
+        },
+        {
+          "source": "../../../core/data/mock/dados",
+          "specifiers": [
+            "PRODUTOS"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "Produto"
+          ]
+        },
+        {
+          "source": "./produto-card",
+          "specifiers": [
+            "ProdutoCard"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/app/shared/ui/produto-card/produto-card.ts": {
+      "filePath": "apps/web/src/app/shared/ui/produto-card/produto-card.ts",
+      "contentHash": "4a12867b382864d6c076ea8169500702753ca9a0b90e1607654256cb828730b9",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProdutoCard",
+          "methods": [],
+          "properties": [
+            "produto",
+            "preco"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "computed",
+            "input"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "ARG_CARD",
+            "ArgBadge",
+            "formatCents"
+          ]
+        },
+        {
+          "source": "../../../core/models",
+          "specifiers": [
+            "Produto"
+          ]
+        }
+      ],
+      "exports": [
+        "ProdutoCard"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/index.html": {
+      "filePath": "apps/web/src/index.html",
+      "contentHash": "7a8991d13fca2da64c8666ee24b42609ca0754c0858f3658a42edc328fa380b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/main.ts": {
+      "filePath": "apps/web/src/main.ts",
+      "contentHash": "dfbab6e069a960050b593274acdef39eacc305f657d55e831edbb2c9c38fc11d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/platform-browser",
+          "specifiers": [
+            "bootstrapApplication"
+          ]
+        },
+        {
+          "source": "./app/app.config",
+          "specifiers": [
+            "appConfig"
+          ]
+        },
+        {
+          "source": "./app/app",
+          "specifiers": [
+            "App"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/src/styles.css": {
+      "filePath": "apps/web/src/styles.css",
+      "contentHash": "627215b40d4aec439fcd630b11f3c7145da23dfebadac8f21497f6e27e6c5d78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/src/testing/providers.ts": {
+      "filePath": "apps/web/src/testing/providers.ts",
+      "contentHash": "2078b75e65bc238c08877060ebe2fc4b450e5d310d57fcff86dfc88c2894704a",
+      "functions": [
+        {
+          "name": "provideTela",
+          "params": [],
+          "returnType": "(Provider | EnvironmentProviders)[]",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@angular/core",
+          "specifiers": [
+            "EnvironmentProviders",
+            "Provider"
+          ]
+        },
+        {
+          "source": "@angular/router",
+          "specifiers": [
+            "provideRouter"
+          ]
+        },
+        {
+          "source": "@brunomonfardini/ui",
+          "specifiers": [
+            "provideArgIcons"
+          ]
+        },
+        {
+          "source": "../app/core/data/mock/mock-repos",
+          "specifiers": [
+            "provideMockRepos"
+          ]
+        },
+        {
+          "source": "../app/core/ui/argila",
+          "specifiers": [
+            "ICONES"
+          ]
+        }
+      ],
+      "exports": [
+        "provideTela"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "apps/web/tsconfig.app.json": {
+      "filePath": "apps/web/tsconfig.app.json",
+      "contentHash": "7672ddde9026f7b661fd154853b5197dd0e504e38368f012964c049fd9688324",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "apps/web/tsconfig.spec.json": {
+      "filePath": "apps/web/tsconfig.spec.json",
+      "contentHash": "c9769641cdbd50403132b7042a3144c517df2d440820e26e8deed20d165e8b87",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "commitlint.config.js": {
+      "filePath": "commitlint.config.js",
+      "contentHash": "993aa4006aa92313fbaf773716289c40b0c7c983327e509ea0011282b868356f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "docs/layout-das-telas.md": {
+      "filePath": "docs/layout-das-telas.md",
+      "contentHash": "04faec7b31756a994db75b2723f8f2e318cc7db1b8963ff9cec69949b6d57f95",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 387,
+      "hasStructuralAnalysis": false
+    },
+    "docs/plano-de-implementacao.md": {
+      "filePath": "docs/plano-de-implementacao.md",
+      "contentHash": "238fb423127d150068357d905755d07426da009a1f06e8a2764bebf2df0bee19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 242,
+      "hasStructuralAnalysis": false
+    },
+    "docs/proximos-passos.md": {
+      "filePath": "docs/proximos-passos.md",
+      "contentHash": "17ab0c9af58b4183b9c26520e0b1013dc81f2a7b932d06983d21f3e743680116",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 191,
+      "hasStructuralAnalysis": false
+    },
+    "e2e/agendamento.e2e.ts": {
+      "filePath": "e2e/agendamento.e2e.ts",
+      "contentHash": "8666bd78f542953ada4f86b4c299cc1c5f3e6b5dd1f0d18605bd1c787b40ea3f",
+      "functions": [
+        {
+          "name": "escolherPrimeiroDiaLivre",
+          "params": [
+            "page"
+          ],
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@playwright/test",
+          "specifiers": [
+            "Page",
+            "expect",
+            "test"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    "e2e/tsconfig.json": {
+      "filePath": "e2e/tsconfig.json",
+      "contentHash": "cbf564fe0a99a631cb77504c6f337ca908edaa6fdf6f5cda0dee1c34cddcef0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "eslint.config.js": {
+      "filePath": "eslint.config.js",
+      "contentHash": "21903e110ef19c9505c3634002c600cb67a8de2ed8ec4cfa84f890ea8967529a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "jest.config.mjs": {
+      "filePath": "jest.config.mjs",
+      "contentHash": "96bd087e8cdb6c0febff27fd4ed1f04bd9c63f10c6c2f9003086b22dcb5f4aab",
+      "functions": [
+        {
+          "name": "angular",
+          "params": [
+            "app"
+          ],
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "jest-preset-angular/presets/index.js",
+          "specifiers": [
+            "presets"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "jest.setup.ts": {
+      "filePath": "jest.setup.ts",
+      "contentHash": "4399d2f69fbce97f5219f692d5301d0fbf6152500a067ca871961daf676a3716",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "jest-preset-angular/setup-env/zoneless",
+          "specifiers": [
+            "setupZonelessTestEnv"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "1ccc5a6764be23e74f0cb10f79261939edd6534454c7b489ba4dbc0b7671c249",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "playwright.config.ts": {
+      "filePath": "playwright.config.ts",
+      "contentHash": "ea146e9bcef224d3636a5bba373151f331ca6fd0ffe81a2a591494ebbb606a5b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@playwright/test",
+          "specifiers": [
+            "defineConfig",
+            "devices"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "pnpm-workspace.yaml": {
+      "filePath": "pnpm-workspace.yaml",
+      "contentHash": "1f59455aeb0b97ae391a6ab72c0b1b1cbb3d62b8c1f34d89f2eed301125eb895",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/lib/relatorio-de-testes.spec.ts": {
+      "filePath": "scripts/lib/relatorio-de-testes.spec.ts",
+      "contentHash": "8d1f258be3676cec8fe5a866104e93e93419bd86fcb35d581e18aa4649bcc900",
+      "functions": [
+        {
+          "name": "count",
+          "params": [
+            "covered",
+            "total"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "file",
+          "params": [
+            "covered",
+            "total"
+          ],
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@jest/globals",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "./relatorio-de-testes.ts",
+          "specifiers": [
+            "HISTORY_HEADER",
+            "compareCoverage",
+            "coverageByProject",
+            "historyLine",
+            "parseJunit",
+            "renderReport",
+            "slowWarnings",
+            "slowest",
+            "CoverageSummary",
+            "JunitSummary"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/lib/relatorio-de-testes.ts": {
+      "filePath": "scripts/lib/relatorio-de-testes.ts",
+      "contentHash": "4ee3b6c4e26a24fde36876935ac81a1dba7e33dea8f982c0509f98a666608b74",
+      "functions": [
+        {
+          "name": "decode",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "attribute",
+          "params": [
+            "tag",
+            "name"
+          ],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "parseJunit",
+          "params": [
+            "xml"
+          ],
+          "returnType": "JunitSummary",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "percent",
+          "params": [
+            "{ total, covered }"
+          ],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "coverageByProject",
+          "params": [
+            "summary",
+            "root"
+          ],
+          "returnType": "ProjectCoverage",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "compareCoverage",
+          "params": [
+            "current",
+            "baseline",
+            "tolerance"
+          ],
+          "returnType": "CoverageChange[]",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "slowest",
+          "params": [
+            "junit",
+            "count"
+          ],
+          "returnType": "TestCase[]",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "fixed",
+          "params": [
+            "value",
+            "digits"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "signed",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "cell",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "renderReport",
+          "params": [
+            "{\n  junit,\n  coverage,\n  changes = [],\n  slowSeconds = 2,\n  top = 10,\n}"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 49
+        },
+        {
+          "name": "slowWarnings",
+          "params": [
+            "junit",
+            "slowSeconds"
+          ],
+          "returnType": "string[]",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "historyLine",
+          "params": [
+            "date",
+            "commit",
+            "junit",
+            "coverage"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "METRICS",
+        "PROJECTS",
+        "parseJunit",
+        "coverageByProject",
+        "compareCoverage",
+        "slowest",
+        "renderReport",
+        "slowWarnings",
+        "HISTORY_HEADER",
+        "historyLine"
+      ],
+      "totalLines": 228,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/relatorio-de-testes.ts": {
+      "filePath": "scripts/relatorio-de-testes.ts",
+      "contentHash": "bcfc58c003f13b94cbb20b13696e7fd843510f61f1386686bf8aeebe73eba0c3",
+      "functions": [
+        {
+          "name": "readJson",
+          "params": [
+            "path"
+          ],
+          "exported": false,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "execFileSync"
+          ]
+        },
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "appendFileSync",
+            "existsSync",
+            "readFileSync",
+            "writeFileSync"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "resolve"
+          ]
+        },
+        {
+          "source": "node:util",
+          "specifiers": [
+            "parseArgs"
+          ]
+        },
+        {
+          "source": "./lib/relatorio-de-testes.ts",
+          "specifiers": [
+            "HISTORY_HEADER",
+            "compareCoverage",
+            "coverageByProject",
+            "historyLine",
+            "parseJunit",
+            "renderReport",
+            "slowWarnings",
+            "CoverageSummary"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/tsconfig.jest.json": {
+      "filePath": "scripts/tsconfig.jest.json",
+      "contentHash": "13f8158be64e9716b0813cf8a5d912e0b5c0b6b896a2f9ff1fb0dde865960d4f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/tsconfig.json": {
+      "filePath": "scripts/tsconfig.json",
+      "contentHash": "993502c7bbe64fffd5be26389afd5aca06f563c301a8d834cdd02e39720dd8ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "c8cafa3acad3cfbce52a73b23d081c6161b75e860c71a75d063ea44a46b2ebcf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    }
+  }
+}
